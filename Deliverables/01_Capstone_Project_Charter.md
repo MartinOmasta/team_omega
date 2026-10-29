@@ -19,7 +19,7 @@ __Project title:__ Your title here.
 
 __Team name:__ I will rename your team in Canvas ir you may use the default.
 
-__Team members:__ You should list the full names of all of your team members, please. I may not know everyone's nicknames yet!
+__Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 
 __Project source:__
 
