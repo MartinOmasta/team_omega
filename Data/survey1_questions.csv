@@ -1,0 +1,256 @@
+Question_ID,Question,Answer,Not_included_english,Sporsmal,Svar
+q1,"In this project, we want to talk with the person in the household who receives the electricity bill - are you the recipient of the electricity bill?",Yes,NA,I dette prosjektet skal vi snakke med den i husstanden som mottar strømregningen - er du mottaker av strømregningen?,Ja
+q1,"In this project, we want to talk with the person in the household who receives the electricity bill - are you the recipient of the electricity bill?",No,NA,I dette prosjektet skal vi snakke med den i husstanden som mottar strømregningen - er du mottaker av strømregningen?,Nei
+q2,What type of electricity contract do you have?,Spot price / Hourly spot,NA,Hvilken type strømavtale har du?,Spotpris /Timespot
+q2,What type of electricity contract do you have?,Variable price,NA,Hvilken type strømavtale har du?,Variabel pris
+q2,What type of electricity contract do you have?,Fixed price,NA,Hvilken type strømavtale har du?,Fast pris
+q2,What type of electricity contract do you have?,Other,NA,Hvilken type strømavtale har du?,Annet
+q2,What type of electricity contract do you have?,Don't know,NA,Hvilken type strømavtale har du?,Vet ikke
+q3,Do you buy electricity that is guaranteed to be renewable?,Yes,NA,Kjøper dere strøm som er garantert fornybar?,Ja
+q3,Do you buy electricity that is guaranteed to be renewable?,No,NA,Kjøper dere strøm som er garantert fornybar?,Nei
+q3,Do you buy electricity that is guaranteed to be renewable?,Don't know,NA,Kjøper dere strøm som er garantert fornybar?,Vet ikke
+q4,What type of building do you live in? Is it a…,Detached house,NA,Hvilken type bolig bor du i? Er det…,Enebolig
+q4,What type of building do you live in? Is it a…,Semi-detached house,NA,Hvilken type bolig bor du i? Er det…,Tomannsbolig
+q4,What type of building do you live in? Is it a…,"Townhouses, chain houses and other small houses with 3 homes or more",NA,Hvilken type bolig bor du i? Er det…,"Rekkehus, kjedehus og andre småhus med 3 boliger eller flere"
+q4,What type of building do you live in? Is it a…,Apartment block,NA,Hvilken type bolig bor du i? Er det…,Boligblokk
+q4,What type of building do you live in? Is it a…,Other type of building,NA,Hvilken type bolig bor du i? Er det…,Annen bygningstype
+q4b,What other type of building do you live in?,NA,x,Hvilken annen bygningstype bor du i?,NA
+q5,How large is the home in square meters?,Below 30 m2,NA,Hvor stor er boligen i antall kvadratmeter?,Under 30 kvm
+q5,How large is the home in square meters?,30-49 m2,NA,Hvor stor er boligen i antall kvadratmeter?,30-49 kvm
+q5,How large is the home in square meters?,50-59 m2,NA,Hvor stor er boligen i antall kvadratmeter?,50-59 kvm
+q5,How large is the home in square meters?,60-79 m2,NA,Hvor stor er boligen i antall kvadratmeter?,60-79 kvm
+q5,How large is the home in square meters?,80-99 m2,NA,Hvor stor er boligen i antall kvadratmeter?,80-99 kvm
+q5,How large is the home in square meters?,100-119 m2,NA,Hvor stor er boligen i antall kvadratmeter?,100-119 kvm
+q5,How large is the home in square meters?,120-159 m2,NA,Hvor stor er boligen i antall kvadratmeter?,120-159 kvm
+q5,How large is the home in square meters?,160 m2 or larger,NA,Hvor stor er boligen i antall kvadratmeter?,160 kvm eller større
+q6,Do you own the home?,Yes,NA,Eier du/dere boligen?,Ja
+q6,Do you own the home?,No,NA,Eier du/dere boligen?,Nei
+q6b1,Do you have a rental unit in the home?,Yes,NA,Har dere en uteleiedel i boligen?,Ja
+q6b1,Do you have a rental unit in the home?,No,NA,Har dere en uteleiedel i boligen?,Nei
+q6b2,Does the rental unit has a separate electricity meter?,Yes,NA,Er det montert egen strømmåler i utleieenheten?,Ja
+q6b2,Does the rental unit has a separate electricity meter?,No,NA,Er det montert egen strømmåler i utleieenheten?,Nei
+q6c,Do several tentants live in the home and share the flat?,Yes,NA,Er dere flere som leier og bor i et bofelleskap?,Ja
+q6c,Do several tentants live in the home and share the flat?,No,NA,Er dere flere som leier og bor i et bofelleskap?,Nei
+q7,What year was the building you are answering for built?,1900 or earlier,NA,Hvilket år ble boligen du nå svarer for bygget?,1900 eller tidligere
+q7,What year was the building you are answering for built?,1901-1920,NA,Hvilket år ble boligen du nå svarer for bygget?,1901-1920
+q7,What year was the building you are answering for built?,1921-1940,NA,Hvilket år ble boligen du nå svarer for bygget?,1921-1940
+q7,What year was the building you are answering for built?,1941-1945,NA,Hvilket år ble boligen du nå svarer for bygget?,1941-1945
+q7,What year was the building you are answering for built?,1946-1960,NA,Hvilket år ble boligen du nå svarer for bygget?,1946-1960
+q7,What year was the building you are answering for built?,1961-1970,NA,Hvilket år ble boligen du nå svarer for bygget?,1961-1970
+q7,What year was the building you are answering for built?,1971-1980,NA,Hvilket år ble boligen du nå svarer for bygget?,1971-1980
+q7,What year was the building you are answering for built?,1981-1990,NA,Hvilket år ble boligen du nå svarer for bygget?,1981-1990
+q7,What year was the building you are answering for built?,1991-2000,NA,Hvilket år ble boligen du nå svarer for bygget?,1991-2000
+q7,What year was the building you are answering for built?,2001-2010,NA,Hvilket år ble boligen du nå svarer for bygget?,2001-2010
+q7,What year was the building you are answering for built?,2011 or later,NA,Hvilket år ble boligen du nå svarer for bygget?,2011 eller senere
+q7,What year was the building you are answering for built?,Unknown,NA,Hvilket år ble boligen du nå svarer for bygget?,Ukjent
+q8,Has the the home been renovated to reduce energy consumption?,Yes,NA,Er boligen renovert for å redusere energiforbruket?,Ja
+q8,Has the the home been renovated to reduce energy consumption?,No,NA,Er boligen renovert for å redusere energiforbruket?,Nei
+q9N1,How is the home heated? Panel heaters,Main heat source,NA,Hvordan varmes boligen opp? Panelovner,Hovedoppvarming
+q9N1,How is the home heated? Panel heaters,Additional heat source,NA,Hvordan varmes boligen opp? Panelovner,Tilleggsoppvarming
+q9N1,How is the home heated? Panel heaters,No,NA,Hvordan varmes boligen opp? Panelovner,Nei
+q9N2,How is the home heated? Electrical underfloor heating,Main heat source,NA,Hvordan varmes boligen opp? Elektrisk gulvvarme,Hovedoppvarming
+q9N2,How is the home heated? Electrical underfloor heating,Additional heat source,NA,Hvordan varmes boligen opp? Elektrisk gulvvarme,Tilleggsoppvarming
+q9N2,How is the home heated? Electrical underfloor heating,No,NA,Hvordan varmes boligen opp? Elektrisk gulvvarme,Nei
+q9N3,How is the home heated? Air-to-air or air-to-water heat pump,Main heat source,NA,Hvordan varmes boligen opp? Luft-luft- eller luft-vann-varmepumpe,Hovedoppvarming
+q9N3,How is the home heated? Air-to-air or air-to-water heat pump,Additional heat source,NA,Hvordan varmes boligen opp? Luft-luft- eller luft-vann-varmepumpe,Tilleggsoppvarming
+q9N3,How is the home heated? Air-to-air or air-to-water heat pump,No,NA,Hvordan varmes boligen opp? Luft-luft- eller luft-vann-varmepumpe,Nei
+q9N4,How is the home heated? Geothermal heat,Main heat source,NA,Hvordan varmes boligen opp? Bergvarme,Hovedoppvarming
+q9N4,How is the home heated? Geothermal heat,Additional heat source,NA,Hvordan varmes boligen opp? Bergvarme,Tilleggsoppvarming
+q9N4,How is the home heated? Geothermal heat,No,NA,Hvordan varmes boligen opp? Bergvarme,Nei
+q9N5,How is the home heated? Fireplace or wood stove,Main heat source,NA,"Hvordan varmes boligen opp? Peis, vedovn",Hovedoppvarming
+q9N5,How is the home heated? Fireplace or wood stove,Additional heat source,NA,"Hvordan varmes boligen opp? Peis, vedovn",Tilleggsoppvarming
+q9N5,How is the home heated? Fireplace or wood stove,No,NA,"Hvordan varmes boligen opp? Peis, vedovn",Nei
+q9N6,How is the home heated? Oil/paraffin/gas/bio oven,Main heat source,NA,Hvordan varmes boligen opp? Olje-/parafin-/gass-/biooven,Hovedoppvarming
+q9N6,How is the home heated? Oil/paraffin/gas/bio oven,Additional heat source,NA,Hvordan varmes boligen opp? Olje-/parafin-/gass-/biooven,Tilleggsoppvarming
+q9N6,How is the home heated? Oil/paraffin/gas/bio oven,No,NA,Hvordan varmes boligen opp? Olje-/parafin-/gass-/biooven,Nei
+q9N7,How is the home heated? District heating or other shared solution for heating,Main heat source,NA,Hvordan varmes boligen opp? Fjernvarme eller felles løsning for oppvarming,Hovedoppvarming
+q9N7,How is the home heated? District heating or other shared solution for heating,Additional heat source,NA,Hvordan varmes boligen opp? Fjernvarme eller felles løsning for oppvarming,Tilleggsoppvarming
+q9N7,How is the home heated? District heating or other shared solution for heating,No,NA,Hvordan varmes boligen opp? Fjernvarme eller felles løsning for oppvarming,Nei
+q9N8,How is the home heated? Other type,Main heat source,NA,Hvordan varmes boligen opp? Annen måte,Hovedoppvarming
+q9N8,How is the home heated? Other type,Additional heat source,NA,Hvordan varmes boligen opp? Annen måte,Tilleggsoppvarming
+q9N8,How is the home heated? Other type,No,NA,Hvordan varmes boligen opp? Annen måte,Nei
+q9c,Can you specify in which other ways the home is heated?,NA,x,Kan du spesifisere på hvilken annen eller andre måter boligen varmes opp?,NA
+q9d1,"In the home you are answering for, how often do you use the fireplace/wood stove?  Sometimes, mostly for having it cosy","Sometimes, mostly for having it cosy",NA,"I boligen du nå svarer for, hvor ofte bruker du peis/vedovn?   Av og til, mest for kosens skyld","Av og til, mest for kosens skyld"
+q9d2,"In the home you are answering for, how often do you use the fireplace/wood stove? Only on the coldest days",Only on the coldest days,NA,"I boligen du nå svarer for, hvor ofte bruker du peis/vedovn?   Bare på de kaldeste dagene",Bare på de kaldeste dagene
+q9d3,"In the home you are answering for, how often do you use the fireplace/wood stove? Weekly in winter",Weekly in winter,NA,"I boligen du nå svarer for, hvor ofte bruker du peis/vedovn?   Ukentlig om vinteren",Ukentlig om vinteren
+q9d4,"In the home you are answering for, how often do you use the fireplace/wood stove? Almost every day in winter",Almost every day in winter,NA,"I boligen du nå svarer for, hvor ofte bruker du peis/vedovn?   Nesten hver dag om vinteren",Nesten hver dag om vinteren
+q10,What indoor temperature do you usually prefer in the living room when you want to feel comfortable? Temperature:,NA,NA,Hvilken innetemperatur har du vanligvis i oppholdsrom når du skal ha det komfortabelt? Temperatur:,NA
+q11,Do you have a lower indoor temperature in rooms that are not used that often?,Yes,NA,Har du/dere en lavere innetemperatur i rom som ikke brukes så ofte?,Ja
+q11,Do you have a lower indoor temperature in rooms that are not used that often?,No,NA,Har du/dere en lavere innetemperatur i rom som ikke brukes så ofte?,Nei
+q12,Do you reduce the temperature at night or when no one is home?,Yes,NA,Reduserer du/dere varmen om natten eller når ingen er hjemme?,Ja
+q12,Do you reduce the temperature at night or when no one is home?,No,NA,Reduserer du/dere varmen om natten eller når ingen er hjemme?,Nei
+q13,Do you control the heating?,No,NA,Styrer du oppvarmingen?,Nei
+q13,Do you control the heating?,"Yes, manually (turn on and off panel heaters, regulate temperature on thermostats, etc.)",NA,Styrer du oppvarmingen?,"Ja, manuelt (skrur av og på panleovner, regulerer temperatur på termostater o.l.)"
+q13,Do you control the heating?,"Yes, automated by time (set schedule in thermostat)",NA,Styrer du oppvarmingen?,"Ja, automatisert etter tidspunkt (fastlagt tidsplan i termostat)"
+q13,Do you control the heating?,"Yes, automated by price (advanced control based on spot price for electricity)",NA,Styrer du oppvarmingen?,"Ja, automatisert etter pris (avansert styring etter spotpris for strøm)"
+q14,How is the hot water heated in your home?,Own electric water heater,NA,Hvordan varmes vannet opp hos dere?,Egen elektrisk varmtvannsbereder
+q14,How is the hot water heated in your home?,Heat pump,NA,Hvordan varmes vannet opp hos dere?,Varmepumpe
+q14,How is the hot water heated in your home?,Electric flow heater,NA,Hvordan varmes vannet opp hos dere?,Elektrisk direktevannvarmer/gjennomstrømningsvarmer
+q14,How is the hot water heated in your home?,Shared water heater or district heating,NA,Hvordan varmes vannet opp hos dere?,Felles varmtvannsbereder eller fjernvarme
+q14,How is the hot water heated in your home?,Other,NA,Hvordan varmes vannet opp hos dere?,Annet
+q14b,Do you actively control the electric water heater by switching it on and off or changing the temperature?,No,NA,Styrer du varmtvannsbereder aktivt ved å slå den av og på eller endre temperaturen?,Nei
+q14b,Do you actively control the electric water heater by switching it on and off or changing the temperature?,"Yes, manually",NA,Styrer du varmtvannsbereder aktivt ved å slå den av og på eller endre temperaturen?,"Ja, manuelt"
+q14b,Do you actively control the electric water heater by switching it on and off or changing the temperature?,"Yes, automated by time",NA,Styrer du varmtvannsbereder aktivt ved å slå den av og på eller endre temperaturen?,"Ja, automatisert etter tidpunkt"
+q14b,Do you actively control the electric water heater by switching it on and off or changing the temperature?,"Yes, automated by price (advanced control based on spot price for electricity)",NA,Styrer du varmtvannsbereder aktivt ved å slå den av og på eller endre temperaturen?,"Ja, automatisert etter pris (avansert styring etter spotpris for strøm)"
+q15_1,What air ventilation system do you have in your home?,What air ventilation system do you have in your home? Natural ventilation (ventilation via windows and air vents),NA,"Hvordan er ventilasjonen i boligen? Er det…  Naturlig ventilasjon (Ventilasjon via vinduer, lufteluker og luftspalter)","Naturlig ventilasjon (Ventilasjon via vinduer, lufteluker og luftspalter)"
+q15_2,What air ventilation system do you have in your home?,What air ventilation system do you have in your home? Mechanical ventilation manually controlled,NA,Hvordan er ventilasjonen i boligen? Er det…  Mekanisk ventilasjon manuelt styrt,Mekanisk ventilasjon manuelt styrt
+q15_3,What air ventilation system do you have in your home?,What air ventilation system do you have in your home? Balanced ventilation system with heat recovery,NA,Hvordan er ventilasjonen i boligen? Er det…  Balansert ventilasjonsanlegg med varmegjenvinning,Balansert ventilasjonsanlegg med varmegjenvinning
+q15_4,What air ventilation system do you have in your home?,What air ventilation system do you have in your home? Don't know,NA,Hvordan er ventilasjonen i boligen? Er det…  Vet ikke,Vet ikke
+q_ekstra_a,Do you actively follow your own electricity consumption?,Yes,NA,Følger du/dere strømforbruket aktivt?,Ja
+q_ekstra_a,Do you actively follow your own electricity consumption?,No,NA,Følger du/dere strømforbruket aktivt?,Nei
+q_ekstra_b_1,How do you get information about your electricity consumption? Electricity bill,Electricity bill,NA,Hvordan får du/dere informasjon om strømforbruket?  Strømfaktura,Strømfaktura
+q_ekstra_b_2,How do you get information about your electricity consumption? Website (e.g. electricity supplier or others),Website (e.g. electricity supplier or others),NA,Hvordan får du/dere informasjon om strømforbruket?  Nettside (til for eksempel strømleverandør eller andre),Nettside (til for eksempel strømleverandør eller andre)
+q_ekstra_b_3,How do you get information about your electricity consumption? App (e.g. electricity supplier or others),App (e.g. electricity supplier or others),NA,Hvordan får du/dere informasjon om strømforbruket?  App (fra for eksempel strømleverandør eller andre),App (fra for eksempel strømleverandør eller andre)
+q_ekstra_b_4,How do you get information about your electricity consumption? Other:,Other:,NA,"Hvordan får du/dere informasjon om strømforbruket?  Annet, noter:","Annet, noter:"
+q_ekstra_b.4,How do you get information about your electricity consumption? Other:,NA,x,"Hvordan får du/dere informasjon om strømforbruket? Annet, noter:",NA
+q_ekstra_c,Do you follow actively how electricity prices vary?,Yes,NA,Følger du/dere aktivt med på hvordan strømprisene varierer?,Ja
+q_ekstra_c,Do you follow actively how electricity prices vary?,No,NA,Følger du/dere aktivt med på hvordan strømprisene varierer?,Nei
+q_ekstra_d_1,How do you get information about electricity prices? Electricity bill,Electricity bill,NA,Hvordan får du/dere informasjon om strømprisene?  Strømfaktura,Strømfaktura
+q_ekstra_d_2,How do you get information about electricity prices? Website (e.g. electricity supplier or others),Website (e.g. electricity supplier or others),NA,Hvordan får du/dere informasjon om strømprisene?  Nettside (til for eksempel strømleverandør eller andre),Nettside (til for eksempel strømleverandør eller andre)
+q_ekstra_d_3,How do you get information about electricity prices? App (e.g. electricity supplier or others),App (e.g. electricity supplier or others),NA,Hvordan får du/dere informasjon om strømprisene?  App (fra for eksempel strømleverandør eller andre),App (fra for eksempel strømleverandør eller andre)
+q_ekstra_d_4,How do you get information about electricity prices? Media / news,Media / news,NA,Hvordan får du/dere informasjon om strømprisene?  Media/nyheter,Media/nyheter
+q_ekstra_d_5,How do you get information about electricity prices? Other,Other,NA,"Hvordan får du/dere informasjon om strømprisene?  Annet, noter:","Annet, noter:"
+q_ekstra_d.5,How do you get information about electricity prices? Other,NA,x,"Hvordan får du/dere informasjon om strømprisene? Annet, noter:",NA
+q16_bil,Do you have a car in your household?,Yes,NA,Har dere bil i husstanden?,Ja
+q16_bil,Do you have a car in your household?,No,NA,Har dere bil i husstanden?,Nei
+q16_bil_a.1,How many cars do you have in your household? Number:,NA,NA,Hvor mange biler har dere i husstanden? Antall:,NA
+q16_bil_b,Do you have an electric car or plug-in hybrid in your household?,Yes,NA,Har dere elbil eller plug-in hybrid i husstanden?,Ja
+q16_bil_b,Do you have an electric car or plug-in hybrid in your household?,No,NA,Har dere elbil eller plug-in hybrid i husstanden?,Nei
+q16.1,How many electric cars or plug-in hybrid cars does your household have? Number:,NA,NA,Hvor mange elbiler eller plug-in hybrid biler har husstanden? Antall:,NA
+q16b6.1,What is the maximum range in kilometers the car can drive electrically? Car 1:,NA,NA,Hva er maksimal rekkevidde i antall kilometer bilen kan kjøre rent elektrisk? Bil 1:,NA
+q16b6.2,What is the maximum range in kilometers the car can drive electrically? Car 2:,NA,NA,Hva er maksimal rekkevidde i antall kilometer bilen kan kjøre rent elektrisk? Bil 2:,NA
+q16b6.3,What is the maximum range in kilometers the car can drive electrically? Car 3:,NA,NA,Hva er maksimal rekkevidde i antall kilometer bilen kan kjøre rent elektrisk? Bil 3:,NA
+q16bN1,Where is the car usually charged? Car 1 (km electric range),At home on the same electricity meter as the rest of the home,NA,Hvor lades bilen(e) vanligvis? Bil 1 ( km. elektrisk rekkevidde),Hjemme på samme strømmåler som boligen
+q16bN1,Where is the car usually charged? Car 1 (km electric range),At home on a shared electricity meter with other homes,NA,Hvor lades bilen(e) vanligvis? Bil 1 ( km. elektrisk rekkevidde),Hjemme på felles strømmåler med andre boliger
+q16bN1,Where is the car usually charged? Car 1 (km electric range),At home on an additional electricity meter,NA,Hvor lades bilen(e) vanligvis? Bil 1 ( km. elektrisk rekkevidde),Hjemme på ekstra strømmåler
+q16bN1,Where is the car usually charged? Car 1 (km electric range),"Not at home (at work, street charging, public stations, other places)",NA,Hvor lades bilen(e) vanligvis? Bil 1 ( km. elektrisk rekkevidde),"Lader ikke hjemme (lader på jobb, gatelading, offentlige stasjoner, andre steder)"
+q16bN2,Where is the car usually charged? Car 2 (km electric range),At home on the same electricity meter as the rest of the home,NA,Hvor lades bilen(e) vanligvis? Bil 2 ( km. elektrisk rekkevidde),Hjemme på samme strømmåler som boligen
+q16bN2,Where is the car usually charged? Car 2 (km electric range),At home on a shared electricity meter with other homes,NA,Hvor lades bilen(e) vanligvis? Bil 2 ( km. elektrisk rekkevidde),Hjemme på felles strømmåler med andre boliger
+q16bN2,Where is the car usually charged? Car 2 (km electric range),At home on an additional electricity meter,NA,Hvor lades bilen(e) vanligvis? Bil 2 ( km. elektrisk rekkevidde),Hjemme på ekstra strømmåler
+q16bN2,Where is the car usually charged? Car 2 (km electric range),"Not at home (at work, street charging, public stations, other places)",NA,Hvor lades bilen(e) vanligvis? Bil 2 ( km. elektrisk rekkevidde),"Lader ikke hjemme (lader på jobb, gatelading, offentlige stasjoner, andre steder)"
+q16bN3,Where is the car usually charged? Car 3 (km electric range),At home on the same electricity meter as the rest of the home,NA,Hvor lades bilen(e) vanligvis? Bil 3 ( km. elektrisk rekkevidde),Hjemme på samme strømmåler som boligen
+q16bN3,Where is the car usually charged? Car 3 (km electric range),At home on a shared electricity meter with other homes,NA,Hvor lades bilen(e) vanligvis? Bil 3 ( km. elektrisk rekkevidde),Hjemme på felles strømmåler med andre boliger
+q16bN3,Where is the car usually charged? Car 3 (km electric range),At home on an additional electricity meter,NA,Hvor lades bilen(e) vanligvis? Bil 3 ( km. elektrisk rekkevidde),Hjemme på ekstra strømmåler
+q16bN3,Where is the car usually charged? Car 3 (km electric range),"Not at home (at work, street charging, public stations, other places)",NA,Hvor lades bilen(e) vanligvis? Bil 3 ( km. elektrisk rekkevidde),"Lader ikke hjemme (lader på jobb, gatelading, offentlige stasjoner, andre steder)"
+q16b1_1,How is the car charged at home?,"Standard outlet [10-16A, 1 phase, 2.3 - 3.5 kW]",NA,Hvordan lades bilen hjemme? Er det…,"Vanlig stikkontakt [10-16A, 1 fas, 2,3 -  3,5 kW]"
+q16b1_1,How is the car charged at home?,"Home charging station 16A, 3 phase [12kW]",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 16A, 3 fas [12kW]"
+q16b1_1,How is the car charged at home?,"Charging station 32A, 3 phase [22kW] or higher",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 32A, 3 fas [22kW] eller høyere"
+q16b1_1,How is the car charged at home?,Don't know,NA,Hvordan lades bilen hjemme? Er det…,Vet ikke
+q16b2_1,How often do you charge your car at home?,Daily,NA,Hvor ofte lader du bilen hjemme? Er det…,Daglig
+q16b2_1,How often do you charge your car at home?,Several times a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Flere ganger i uken
+q16b2_1,How often do you charge your car at home?,About once a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i uken
+q16b2_1,How often do you charge your car at home?,About once a month or less frequently,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i måneden eller sjeldnere
+q16b2_1,How often do you charge your car at home?,Unsure / don't know,NA,Hvor ofte lader du bilen hjemme? Er det…,Er usikker/ vet ikke
+q16b3_1,At what time do you usually charge your car?,Morning (7 am - 1 pm),NA,Når på døgnet lader du bilen vanligvis?,Morgen/formiddag (kl. 7 - 13)
+q16b3_1,At what time do you usually charge your car?,Afternoon (1 pm - 5 pm),NA,Når på døgnet lader du bilen vanligvis?,Ettermiddag (kl.  13 - 17)
+q16b3_1,At what time do you usually charge your car?,Evening (5 pm - 10 pm),NA,Når på døgnet lader du bilen vanligvis?,Kveld (kl. 17 - 22)
+q16b3_1,At what time do you usually charge your car?,Night (10 pm - 7 am),NA,Når på døgnet lader du bilen vanligvis?,Natt (kl. 22 - 7)
+q16b3_1,At what time do you usually charge your car?,Unsure / don't know,NA,Når på døgnet lader du bilen vanligvis?,Er usikker/vet ikke
+q16b4_1,Do you control the charging?,No,NA,Styrer du ladingen?,Nei
+q16b4_1,Do you control the charging?,"Yes, manually",NA,Styrer du ladingen?,"Ja, manuelt"
+q16b4_1,Do you control the charging?,"Yes, automated by time",NA,Styrer du ladingen?,"Ja, automatisert etter tidspunkt"
+q16b4_1,Do you control the charging?,"Yes, automated by price (advanced control based on spot price for electricity)",NA,Styrer du ladingen?,"Ja, automatisert etter pris (avansert styring etter spotpris for strøm)"
+q16b4_1,Do you control the charging?,Unsure / don't know,NA,Styrer du ladingen?,Er usikker/ vet ikke
+q16b5_1.1,"How far, in terms of kilometers, do you usually drive the car before charging it? Kilometers:",NA,NA,"Hvor langt, i antall kilometer, kjører du vanligvis med bilen før du lader den? Antall kilometer:",NA
+q16b1_2,How is the car charged at home?,"Standard outlet [10-16A, 1 phase, 2.3 - 3.5 kW]",NA,Hvordan lades bilen hjemme? Er det…,"Vanlig stikkontakt [10-16A, 1 fas, 2,3 -  3,5 kW]"
+q16b1_2,How is the car charged at home?,"Home charging station 16A, 3 phase [12kW]",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 16A, 3 fas [12kW]"
+q16b1_2,How is the car charged at home?,"Charging station 32A, 3 phase [22kW] or higher",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 32A, 3 fas [22kW] eller høyere"
+q16b1_2,How is the car charged at home?,Don't know,NA,Hvordan lades bilen hjemme? Er det…,Vet ikke
+q16b2_2,How often do you charge your car at home?,Daily,NA,Hvor ofte lader du bilen hjemme? Er det…,Daglig
+q16b2_2,How often do you charge your car at home?,Several times a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Flere ganger i uken
+q16b2_2,How often do you charge your car at home?,About once a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i uken
+q16b2_2,How often do you charge your car at home?,About once a month or less frequently,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i måneden eller sjeldnere
+q16b2_2,How often do you charge your car at home?,Unsure / don't know,NA,Hvor ofte lader du bilen hjemme? Er det…,Er usikker/ vet ikke
+q16b3_2,At what time do you usually charge your car?,Morning (7 am - 1 pm),NA,Når på døgnet lader du bilen vanligvis?,Morgen/formiddag (kl. 7 - 13)
+q16b3_2,At what time do you usually charge your car?,Afternoon (1 pm - 5 pm),NA,Når på døgnet lader du bilen vanligvis?,Ettermiddag (kl.  13 - 17)
+q16b3_2,At what time do you usually charge your car?,Evening (5 pm - 10 pm),NA,Når på døgnet lader du bilen vanligvis?,Kveld (kl. 17 - 22)
+q16b3_2,At what time do you usually charge your car?,Night (10 pm - 7 am),NA,Når på døgnet lader du bilen vanligvis?,Natt (kl. 22 - 7)
+q16b3_2,At what time do you usually charge your car?,Unsure / don't know,NA,Når på døgnet lader du bilen vanligvis?,Er usikker/vet ikke
+q16b4_2,Do you control the charging?,No,NA,Styrer du ladingen?,Nei
+q16b4_2,Do you control the charging?,"Yes, manually",NA,Styrer du ladingen?,"Ja, manuelt"
+q16b4_2,Do you control the charging?,"Yes, automated by time",NA,Styrer du ladingen?,"Ja, automatisert etter tidspunkt"
+q16b4_2,Do you control the charging?,"Yes, automated by price (advanced control based on spot price for electricity)",NA,Styrer du ladingen?,"Ja, automatisert etter pris (avansert styring etter spotpris for strøm)"
+q16b4_2,Do you control the charging?,Unsure / don't know,NA,Styrer du ladingen?,Er usikker/ vet ikke
+q16b5_2.1,"How far, in terms of kilometers, do you usually drive the car before charging it? Kilometers:",NA,NA,"Hvor langt, i antall kilometer, kjører du vanligvis med bilen før du lader den? Antall kilometer:",NA
+q16b1_3,How is the car charged at home?,"Standard outlet [10-16A, 1 phase, 2.3 - 3.5 kW]",NA,Hvordan lades bilen hjemme? Er det…,"Vanlig stikkontakt [10-16A, 1 fas, 2,3 -  3,5 kW]"
+q16b1_3,How is the car charged at home?,"Home charging station 16A, 3 phase [12kW]",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 16A, 3 fas [12kW]"
+q16b1_3,How is the car charged at home?,"Charging station 32A, 3 phase [22kW] or higher",NA,Hvordan lades bilen hjemme? Er det…,"Ladestasjon 32A, 3 fas [22kW] eller høyere"
+q16b1_3,How is the car charged at home?,Don't know,NA,Hvordan lades bilen hjemme? Er det…,Vet ikke
+q16b2_3,How often do you charge your car at home?,Daily,NA,Hvor ofte lader du bilen hjemme? Er det…,Daglig
+q16b2_3,How often do you charge your car at home?,Several times a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Flere ganger i uken
+q16b2_3,How often do you charge your car at home?,About once a week,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i uken
+q16b2_3,How often do you charge your car at home?,About once a month or less frequently,NA,Hvor ofte lader du bilen hjemme? Er det…,Ca. én gang i måneden eller sjeldnere
+q16b2_3,How often do you charge your car at home?,Unsure / don't know,NA,Hvor ofte lader du bilen hjemme? Er det…,Er usikker/ vet ikke
+q16b3_3,At what time do you usually charge your car?,Morning (7 am - 1 pm),NA,Når på døgnet lader du bilen vanligvis?,Morgen/formiddag (kl. 7 - 13)
+q16b3_3,At what time do you usually charge your car?,Afternoon (1 pm - 5 pm),NA,Når på døgnet lader du bilen vanligvis?,Ettermiddag (kl.  13 - 17)
+q16b3_3,At what time do you usually charge your car?,Evening (5 pm - 10 pm),NA,Når på døgnet lader du bilen vanligvis?,Kveld (kl. 17 - 22)
+q16b3_3,At what time do you usually charge your car?,Night (10 pm - 7 am),NA,Når på døgnet lader du bilen vanligvis?,Natt (kl. 22 - 7)
+q16b3_3,At what time do you usually charge your car?,Unsure / don't know,NA,Når på døgnet lader du bilen vanligvis?,Er usikker/vet ikke
+q16b4_3,Do you control the charging?,No,NA,Styrer du ladingen?,Nei
+q16b4_3,Do you control the charging?,"Yes, manually",NA,Styrer du ladingen?,"Ja, manuelt"
+q16b4_3,Do you control the charging?,"Yes, automated by time",NA,Styrer du ladingen?,"Ja, automatisert etter tidspunkt"
+q16b4_3,Do you control the charging?,"Yes, automated by price (advanced control based on spot price for electricity)",NA,Styrer du ladingen?,"Ja, automatisert etter pris (avansert styring etter spotpris for strøm)"
+q16b4_3,Do you control the charging?,Unsure / don't know,NA,Styrer du ladingen?,Er usikker/ vet ikke
+q16b5_3.1,"How far, in terms of kilometers, do you usually drive the car before charging it? Kilometers:",NA,NA,"Hvor langt, i antall kilometer, kjører du vanligvis med bilen før du lader den? Antall kilometer:",NA
+q17,Do you have solar cells?,Yes,NA,Har du/dere solcelleannlegg ?,Ja
+q17,Do you have solar cells?,No,NA,Har du/dere solcelleannlegg ?,Nei
+q17b.1,How large is the photovoltaic system? Size in kilowatts (kW):,NA,NA,Hvor stort er solcelleanlegget? Størrelse i kilowatt (kW):,NA
+q17c,Do you have a battery (not an electric car) connected to the photovoltaic system?,Yes,NA,Har du/dere batteri (ikke elbil) koblet til solcelleanlegget?,Ja
+q17c,Do you have a battery (not an electric car) connected to the photovoltaic system?,No,NA,Har du/dere batteri (ikke elbil) koblet til solcelleanlegget?,Nei
+q18,Inngår strømbruk fra gårdsbruk eller forretningsvirksomhet i samme strømmåleren?,Yes,NA,Inngår strømbruk fra gårdsbruk eller forretningsvirksomhet i samme strømmåleren?,Ja
+q18,Inngår strømbruk fra gårdsbruk eller forretningsvirksomhet i samme strømmåleren?,No,NA,Inngår strømbruk fra gårdsbruk eller forretningsvirksomhet i samme strømmåleren?,Nei
+q_kjonn,Sex,Man,NA,Er du…. ?,Mann
+q_kjonn,Sex,Woman,NA,Er du…. ?,Kvinne
+q_kjonn,Sex,Don't want to answer,NA,Er du…. ?,Ønsker ikke å svare
+q19,"How many people, yourself included, live in your household?",1 person,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",1 person
+q19,"How many people, yourself included, live in your household?",2 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",2 personer
+q19,"How many people, yourself included, live in your household?",3 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",3 personer
+q19,"How many people, yourself included, live in your household?",4 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",4 personer
+q19,"How many people, yourself included, live in your household?",5 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",5 personer
+q19,"How many people, yourself included, live in your household?",6 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",6 personer
+q19,"How many people, yourself included, live in your household?",7 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",7 personer
+q19,"How many people, yourself included, live in your household?",8 persons,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",8 personer
+q19,"How many people, yourself included, live in your household?",9 persons or more,NA,"Hvor mange personer, deg selv inkludert, bor det i husstanden?",9 personer eller flere
+q20.1,How old are the household residents? How many of the household's residents are ... 0-1 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 0-1 år,NA
+q20.2,How old are the household residents? How many of the household's residents are ... 2-5 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 2-5 år,NA
+q20.3,How old are the household residents? How many of the household's residents are ... 6-15 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 6-15 år,NA
+q20.4,How old are the household residents? How many of the household's residents are ... 16-22 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 16-22 år,NA
+q20.5,How old are the household residents? How many of the household's residents are ... 23-29 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 23-29 år,NA
+q20.6,How old are the household residents? How many of the household's residents are ... 30-39 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 30-39 år,NA
+q20.7,How old are the household residents? How many of the household's residents are ... 40-49 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 40-49 år,NA
+q20.8,How old are the household residents? How many of the household's residents are ... 50-66 years,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 50-66 år,NA
+q20.9,How old are the household residents? How many of the household's residents are ... 67 years and older,NA,NA,I hvilken alder er husstandens beboere? Hvor mange av husstandens beboere er... 67 år og eldre,NA
+q21,What is the highest completed education in the household?,Primary school (up to 10 years of schooling),NA,Hva er høyeste gjennomførte utdanning i husstanden?,Grunnskole (inntil 10 års skolegang)
+q21,What is the highest completed education in the household?,High school / High school level (11-13 years of schooling),NA,Hva er høyeste gjennomførte utdanning i husstanden?,Videregående skole / Gymnasnivå  (11-13 års skolegang)
+q21,What is the highest completed education in the household?,"College / University, undergraduate degree (1-3 years)",NA,Hva er høyeste gjennomførte utdanning i husstanden?,"Høyskole / Universitet, lavere grad (1-3 år)"
+q21,What is the highest completed education in the household?,"College / University, higher degree (4 years or more)",NA,Hva er høyeste gjennomførte utdanning i husstanden?,"Høyskole / Universitet, høyere grad  (4 år eller mer)"
+q22,What is the total gross income before taxes of the household?,Below NOK 300 000,NA,Hva er husstandens samlede bruttoinntekt?,Inntil 300 000 kr
+q22,What is the total gross income before taxes of the household?,NOK 300 000 - 499 999,NA,Hva er husstandens samlede bruttoinntekt?,300 000 - 499 999 kr
+q22,What is the total gross income before taxes of the household?,NOK 500 000 -799 999,NA,Hva er husstandens samlede bruttoinntekt?,500 000 - 799 999 kr
+q22,What is the total gross income before taxes of the household?,NOK 800 000 - 999 999,NA,Hva er husstandens samlede bruttoinntekt?,800 000 - 999 999 kr
+q22,What is the total gross income before taxes of the household?,NOK 1 000 000 - 1 499 999,NA,Hva er husstandens samlede bruttoinntekt?,1 000 000 - 1 499 999 kr
+q22,What is the total gross income before taxes of the household?,NOK 1 500 000 or more,NA,Hva er husstandens samlede bruttoinntekt?,Over 1 500 000 kr
+q22,What is the total gross income before taxes of the household?,Don't want to answer,NA,Hva er husstandens samlede bruttoinntekt?,Vil ikke oppgi
+q22,What is the total gross income before taxes of the household?,Don't know,NA,Hva er husstandens samlede bruttoinntekt?,Vet ikke
+q23,Is someone usually at home during the day on weekdays?,Yes,NA,Er det vanligvis noen hjemme på dagtid på hverdager?,Ja
+q23,Is someone usually at home during the day on weekdays?,No,NA,Er det vanligvis noen hjemme på dagtid på hverdager?,Nei
+q24.1,"In what life situation are the household residents? How many of the household's residents are ... In kindergarten, primary school",NA,NA,"I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... I barnehage, grunnskole",NA
+q24.2,"In what life situation are the household residents? How many of the household's residents are ... Student (high school, college, university)",NA,NA,"I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... Student (fagskoler, høyere utdanning)",NA
+q24.3,In what life situation are the household residents? How many of the household's residents are ... In part-time job,NA,NA,I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... I deltidsjobb,NA
+q24.4,In what life situation are the household residents? How many of the household's residents are ... In full-time job,NA,NA,I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... I heltidsjobb,NA
+q24.5,In what life situation are the household residents? How many of the household's residents are ... Unemployed or not in education,NA,NA,I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... Ikke i jobb eller utdanning,NA
+q24.6,In what life situation are the household residents? How many of the household's residents are ... Retired,NA,NA,I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... Pensjonist/trygdet,NA
+q24.7,In what life situation are the household residents? How many of the household's residents are ... Other,NA,NA,I hvilken livssituasjon er husstandens beboerne? Hvor mange av husstandens beboere er... Annet,NA
+husstand,Which of the following alternatives describes your household?,Living alone,NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Aleneboende
+husstand,Which of the following alternatives describes your household?,Couple without children living at home,NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Par uten hjemmeboende barn
+husstand,Which of the following alternatives describes your household?,Couple with small child (youngest child 0-5 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Par med små barn (yngste barn 0-5 år)
+husstand,Which of the following alternatives describes your household?,Couple with large children (youngest child 6-17 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Par med store barn (yngste barn 6-17 år)
+husstand,Which of the following alternatives describes your household?,Mother/father with small children (youngest child 0-5 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Mor/Far med små barn (yngste barn 0-5 år)
+husstand,Which of the following alternatives describes your household?,Mother/father with large children (youngest child 6-17 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Mor/Far med store barn (yngste barn 6-17 år)
+husstand,Which of the following alternatives describes your household?,Single-family households with adult children (youngest child 18 years or older),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Enfamiliehusholdninger med voksne barn (yngste barn 18 år og over)
+husstand,Which of the following alternatives describes your household?,Multi-family household without children 0-17 years,NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Flerfamiliehusholdning uten barn 0-17 år
+husstand,Which of the following alternatives describes your household?,Multi-family household with small children (youngest child 0-5 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Flerfamiliehusholdning med små barn (yngste barn 0-5 år)
+husstand,Which of the following alternatives describes your household?,Multi-family household with large children (youngest child 6-17 years),NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Flerfamiliehusholdning med store barn (yngste barn 6-17 år)
+husstand,Which of the following alternatives describes your household?,Other,NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Annet
+husstand,Which of the following alternatives describes your household?,Don't want to answer,NA,Hvilket av alternativene nedenfor beskriver best din husstand?,Ønsker ikke å svare
+husstand_1,Which of the following alternatives describes your household? Other:,NA,x,"Hvilket av alternativene nedenfor beskriver best din husstand? Annet, noter:",NA
