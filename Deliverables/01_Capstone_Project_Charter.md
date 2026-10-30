@@ -68,7 +68,7 @@ __What might this stakeholder want to learn or do with the results?__
 
 __Your response:__
 
-[Identify the stakeholder and describe how the results could be useful.]
+Ipsos and other power companies who want to maximize profit by increasing price without losing demand. Those who can maximize profit prior to dimishing returns.
 
 ### Data Overview
 
