@@ -113,11 +113,11 @@ What do you still need to understand about the problem, the data, or the intende
 
 List up to three questions that your team expects to investigate during the background/rationale development and initial data exploration, both of which you will do during Sprint 2.
 
-1. [Your question here.] 
+1. What effect does temperature have on kWh use of electrical consumption? 
 
-2. [Your question here.] 
+2. What effect does time of day have on kwH use of electrical consumption?
 
-3. [Your question here.] 
+3. Does the local area or the household size have an effect on kwH use of electrical consumption?
 
 These are starting questions, not necessarily your final analytical question(s). You will refine your understanding of the problem and develop your Analysis Plan during Sprint 2.
 
