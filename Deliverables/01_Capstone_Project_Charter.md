@@ -17,7 +17,7 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 __Project title:__ Your title here.
 
-__Team name:__ I will rename your team in Canvas ir you may use the default.
+__Team name:__ Team Omega.
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 
@@ -37,7 +37,8 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 __Your response:__
 
-[Describe the problem.]
+Using the proposed problem from the Electrical Project as our initial question:
+Which households shift electricity use in response to variable pricing, and can we predict their flexibility?
 
 ### Why Does This Problem Matter?
 
@@ -70,6 +71,9 @@ __Your response:__
 
 Ipsos and other power companies who want to maximize profit by increasing price without losing demand. Those who can maximize profit prior to dimishing returns.
 
+Ben: Maximizing profit without losing demand is definitely something that would be on the power company's docket. I think though, if we're looking at the question of predicting the households shifting electricity usage, we should consider that it's not just the power company that is our only stakeholder. The goal is sustainability of Electricity as a primary power source in the document. As such, I would consider the consumers part of the stakeholders as well. 
+
+
 ### Data Overview
 
 __What data will you use to investigate the problem?__
@@ -78,8 +82,8 @@ Identify the dataset and briefly describe what it contains. For a project from t
 
 | Item | Description |
 |---|---|
-| Dataset name | *You fill in your answer here.* |
-| Data source | *You fill in your answer here.* |
+| Dataset name | A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment |
+| Data source |(https://zenodo.org/records/8248802)|
 | Unit of analysis (e.g., customer, transaction, patient) | *You fill in your answer here.* |
 | Approximate number of observations, if known | *You fill in your answer here.* |
 | General types of information available | *You fill in your answer here.* |
