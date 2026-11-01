@@ -24,6 +24,7 @@ __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 __Project source:__
 
 - [x] Capstone Curated Project Bank
+https://github.com/ksgeist/dse6311_capstone/tree/main/Capstone_Project_Bank/Electricity_Pricing
 
 - [ ] Alternative project approved by instructor
 
