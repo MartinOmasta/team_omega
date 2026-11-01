@@ -15,15 +15,15 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 ## Project Information
 
-__Project title:__ Your title here.
+__Project title:__ Norwegian Heating - It's Electric! (This just popped in my brain, can totally change it if you don't like it -BCN)
 
-__Team name:__ I will rename your team in Canvas ir you may use the default.
+__Team name:__ Team-Omega.
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 
 __Project source:__
 
-- [ ] Capstone Curated Project Bank
+- [x] Capstone Curated Project Bank
 
 - [ ] Alternative project approved by instructor
 
@@ -35,7 +35,8 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 *Example:* A subscription-based company is experiencing customer attrition. When customers cancel their subscriptions, the company loses recurring revenue and may incur additional costs to acquire replacement customers.
 
-__Your response:__
+__Your response: Which households shift electricity use in response to variable pricing, and can we predict their flexibility?
+We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below. 
 
 [Describe the problem.]
 
@@ -50,7 +51,7 @@ __Consider__:
 
 *Example:* Understanding customer attrition could help a company evaluate its retention strategies and determine where to focus customer support or engagement resources.
 
-__Your response:__
+__Your response: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy source it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable climates during the winter this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. 
 
 [Explain why the problem matters.]
 
@@ -60,13 +61,17 @@ __Who would care about the results of this project?__
 
 Identify the primary stakeholder or intended audience. This could be a business unit, organizational decision-maker, public agency, healthcare provider, or other group.
 
+BCN: I think that the three main target audiences would be Governments, Electrical companies and the population at large. 
+
 __Primary stakeholder:__
 
 __What might this stakeholder want to learn or do with the results?__
 
 *Example:* A customer retention team might use the results to better understand which customer characteristics or behaviors are associated with cancellation and to inform future retention strategies.
 
-__Your response:__
+__Your response: Govt: The effects that policy will make on the constituents and how best to guide that forward keeping in mind the health and well-being of the populace. 
+                  Electric companies: How to maintain a customer base and keep houses heated, maintain affordability and profitability.
+                  Populace: Gain information to use for more informed business, and political decisions. 
 
 Ipsos and other power companies who want to maximize profit by increasing price without losing demand. Those who can maximize profit prior to dimishing returns.
 
@@ -78,12 +83,12 @@ Identify the dataset and briefly describe what it contains. For a project from t
 
 | Item | Description |
 |---|---|
-| Dataset name | *You fill in your answer here.* |
-| Data source | *You fill in your answer here.* |
-| Unit of analysis (e.g., customer, transaction, patient) | *You fill in your answer here.* |
-| Approximate number of observations, if known | *You fill in your answer here.* |
-| General types of information available | *You fill in your answer here.* |
-| Data access confirmed? | *Choose one*: Yes / No |
+| Dataset name | A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment. |
+| Data source | https://doi.org/10.5281/zenodo.8248802 |
+| Unit of analysis (e.g., customer, transaction, patient) | Electricity usage in kWH during Norwegian Winters |
+| Approximate number of observations, if known |  13.52 Million. |
+| General types of information available | Participant ID, Date, Hour of the day, Participation in phase, kWH Demand, Price Signal, Temperature recordings |
+| Data access confirmed? | Yes |
 
 __How might these data help address the problem?__
 
@@ -91,7 +96,7 @@ Briefly explain what information in the dataset could be relevant to the problem
 
 *Example:* The dataset contains customer demographics, subscription information, service usage, and cancellation status. These data may help the team examine patterns associated with customer attrition.
 
-__Your response:__
+__Your response: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. 
 
 [Describe the relevance of the data to the problem.]
 
@@ -103,7 +108,7 @@ At a high level, describe what you hope to learn or accomplish using the availab
 
 *Example:* The team could use historical customer information to identify patterns associated with churn and investigate whether customer cancellation can be predicted using available customer characteristics and behaviors.
 
-__Your response:__
+__Your response: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. (I was having a hard time with this one so, we can flesh it out later I think. -BCN
 
 [Describe the intended analytical task in a few sentences.]
 
@@ -127,9 +132,9 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 
 1. __The dataset chosen may not be suitable to address the problem/question exactly as posed.__
 
-2. [Your risk here.]
+2. There may be gaps in the data, or not as comprehensive as would be helpful
 
-3. [Your risk here.]
+3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this. 
 
 ### Your Intended Stakeholder
 
