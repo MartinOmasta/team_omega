@@ -36,7 +36,7 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 *Example:* A subscription-based company is experiencing customer attrition. When customers cancel their subscriptions, the company loses recurring revenue and may incur additional costs to acquire replacement customers.
 
-__Your response: Which households shift electricity use in response to variable pricing, and can we predict their flexibility?
+__Your response__: Which households shift electricity use in response to variable pricing, and can we predict their flexibility?
 We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below. 
 
 ### Why Does This Problem Matter?
@@ -50,7 +50,7 @@ __Consider__:
 
 *Example:* Understanding customer attrition could help a company evaluate its retention strategies and determine where to focus customer support or engagement resources.
 
-__Your response: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy source it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable climates during the winter this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. 
+__Your response__: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy source it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable climates during the winter this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. 
 
 ### Stakeholder and Intended Use
 
@@ -66,7 +66,7 @@ __What might this stakeholder want to learn or do with the results?__
 
 *Example:* A customer retention team might use the results to better understand which customer characteristics or behaviors are associated with cancellation and to inform future retention strategies.
 
-__Your response: 
+__Your response__: 
                   Government: The effects that policy will make on the constituents and how best to guide that forward keeping in mind the health and well-being of the populace. 
                   Electric companies: How to maintain a customer base and keep houses heated, maintain affordability and profitability.
                   Populace: Gain information to use for more informed business, and political decisions. 
