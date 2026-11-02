@@ -15,7 +15,7 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 ## Project Information
 
-__Project title:__ Norwegian Heating - It's Electric! Customers as routine Creatures-of-Habit or Homo Economicus - driven by rational self-interest
+__Project title:__ Norwegian Heating - It's Electric! Customers as routine Creatures-of-Habit or as Homo Economicus - driven by rational self-interest
 
 __Team name:__ Team Omega
 
