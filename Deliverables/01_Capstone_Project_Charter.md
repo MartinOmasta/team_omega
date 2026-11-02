@@ -36,7 +36,10 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 *Example:* A subscription-based company is experiencing customer attrition. When customers cancel their subscriptions, the company loses recurring revenue and may incur additional costs to acquire replacement customers.
 
-__Your response__: Which households shift electricity use in response to variable pricing, and can we predict their flexibility?
+__Your response__: Which households shift electricity use in response to variable pricing, and can we predict their flexibility? Customers are given notifications
+regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience
+days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how
+the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
 We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below. 
 
 ### Why Does This Problem Matter?
@@ -129,10 +132,9 @@ These are starting questions, not necessarily your final analytical question(s).
 Project risks are uncertainties that can undermine a project's success. Sometimes we have ways to better control for or assess risks, and sometimes we do not. Your job is to try to identify at least 2 more risks to this project. I am starting you off with a risk everyone will always have at this stage in a project.
 
 1. __The dataset chosen may not be suitable to address the problem/question exactly as posed.__
-
 2. There may be gaps in the data, or not as comprehensive as would be helpful
-
-3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this. 
+3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this.
+4. Phase_1 (From 11 Feb 2020 until 9 Mar 2020) was truncated due to COVID, so much of the data that is available is only fromp Phase_2 (16 Dec 2020 - 25 Mar 2021)
 
 ### Your Intended Stakeholder
 
@@ -153,6 +155,6 @@ Before submitting, confirm that everyone on your team can answer the following:
 
 __Team confirmation:__ We agree that this charter accurately describes our shared understanding of the project at the start of the Capstone.
 
-__Submitted by:__ [You only need one person to submit]
+__Submitted by:__ Benjamin Niemi
 
-__Date:__ [Don't forget to date it!]
+__Date:__ 03 Nov 2026
