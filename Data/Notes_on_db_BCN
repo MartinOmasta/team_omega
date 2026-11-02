@@ -15,7 +15,7 @@ due to more geologically diverse localessuch as Bodø and Tromsø.
   This could be attributed to COVID-19 lock downs which were initiated March 12, 2020 in Norway. 
 
 •	Experiment 1: Feb 11, 2020 -> March 9, 2020. 28 days total.
-  Experiment 2: Dec 16, 2020 -> March 25, 2021 101days total.
+  Experiment 2: Dec 16, 2020 -> March 25, 2021 101 days total.
 
 •	The researchers did record for some time before and after each experiment,
   according to the document:
@@ -49,3 +49,6 @@ due to more geologically diverse localessuch as Bodø and Tromsø.
   living in houses, with an age between 50-80 years, men and couples without children.” 
   They attribute this to the low recruitment rate at 3.4% because it was a complicated process to sign up. 
   o	They worked to make the participants more representative in phase 2 as well as bring recruitment rates up to 40-50% 
+
+•	There are a lot of "Control" days. Days when the experiment was not run at all - in fact ~88.6% of the rows have NULL values, as various
+customers we given the Price_signal on any given day in the experiment window.
