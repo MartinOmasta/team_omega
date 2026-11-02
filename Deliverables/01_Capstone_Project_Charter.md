@@ -75,6 +75,7 @@ __What might this stakeholder want to learn or do with the results?__
 __Your response__: 
 - Government: The effects that policy will make on the constituents and how best to guide that forward, keeping in mind the health and well-being of the populace. 
 - Electric companies: Who want to maintain a customer base and keep houses heated, maintain affordability and profitability. Who want to maximize profit by increasing price without losing demand due to dimishing returns.
+  - Statnett, Gudbrandsdal Energi, Ishavskraft, and Bodø Energi
 - Populace: Gain information to use for more informed business, and political decisions. 
 
 
@@ -101,7 +102,12 @@ Briefly explain what information in the dataset could be relevant to the problem
 
 __Your response: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. 
 
-[Describe the relevance of the data to the problem.]
+These data give us an opportunity to form classification typology from discrete behavioral clusters:
+- The Optimizers (Homo Econmicus) who are highly responsive and excel at rapid load shifting
+- The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told by thier power provider
+- The Constrained: These are folk who are willing but maybe be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
+
+These data also give us an opportunity to form a regression model to predict some type of Flexibility Index for a given upcoming price shock.
 
 ### The Data Science Opportunity
 
@@ -143,6 +149,7 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 This is actually one of the hardest parts - identifying your primary stakeholder. In the real world, you will know exactly who they are and what is expected of you. Here, you are being asked __to choose__ one (and really try to focus on just one) stakeholder. This will be the audience to whom you address your deliverables (as well as other data scientists on your team, of course!).
 
 __Your response__: 
+Statnett SF - the state-owned Norwegian transmission system operator is the primary entity that initated, benefited from, and financed this study. This is our primary intended stakeholder and the audience we will address.
 
 ## Final Check
 
@@ -156,6 +163,13 @@ Before submitting, confirm that everyone on your team can answer the following:
 - [ ] We have identified any important questions or uncertainties that remain.
 - [ ] We have identified, at a high level, any risks to this project.
 - [ ] We have confirmed that the project and data source are appropriate for the eight-week Capstone.
+
+## Works Cited
+
+- M. Hofmann and T. Siebenbrunner, “A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment,” Data Brief, vol. 50, p. 109571, Oct. 2023, doi: 10.1016/j.dib.2023.109571.
+- Google, Virtual Assistant (VA), "Prompt used to generate response (Various prompts "Thoughts on Data Exploration and conceptualizing Flexability")," 2026. [Online]. Available: VAMMA (Virtual Assistant with Manual Modification and Arrangement, Gemini, Google). [Accessed Nov 2026].
+- “Homo economicus,” Wikipedia. Oct. 04, 2026. Accessed: Nov. 02, 2026. [Online]. Available: https://en.wikipedia.org/w/index.php?title=Homo_economicus&oldid=1378415223
+- “Norwegian Krone (NOK) To US Dollar (USD) Exchange Rate History for 2020.” Accessed: Nov. 02, 2026. [Online]. Available: https://www.exchange-rates.org/exchange-rate-history/nok-usd-2020
 
 __Team confirmation:__ We agree that this charter accurately describes our shared understanding of the project at the start of the Capstone.
 
