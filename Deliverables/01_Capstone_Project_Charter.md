@@ -15,9 +15,9 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 ## Project Information
 
-__Project title:__ Norwegian Heating - It's Electric! (This just popped in my brain, can totally change it if you don't like it -BCN)
+__Project title:__ Norwegian Heating - It's Electric! Customers as routine Creatures-of-Habit or Homo Economicus - driven by rational self-interest
 
-__Team name:__ Team-Omega.
+__Team name:__ Team Omega
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 
