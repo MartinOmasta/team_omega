@@ -51,4 +51,4 @@ due to more geologically diverse localessuch as Bodø and Tromsø.
   o	They worked to make the participants more representative in phase 2 as well as bring recruitment rates up to 40-50% 
 
 •	There are a lot of "Control" days. Days when the experiment was not run at all - in fact ~88.6% of the rows have NULL values, as various
-customers we given the Price_signal on any given day in the experiment window.
+  customers we given the Price_signal on any given day in the experiment window.

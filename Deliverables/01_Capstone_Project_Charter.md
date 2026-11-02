@@ -20,11 +20,16 @@ __Project title:__ Norwegian Heating - It's Electric! Customers as routine Creat
 __Team name:__ Team Omega
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
+Facilitation/Team Lead: Martin (Sprint 1)
+Notetakers/Document Lead: Ben (Sprint 1)
+Delegate/Communications Lead: Anthony (Sprint 1)
 
 __Project source:__
 
 - [x] Capstone Curated Project Bank
-https://github.com/ksgeist/dse6311_capstone/tree/main/Capstone_Project_Bank/Electricity_Pricing
+  - A rich dataset of hourly residential electricity consumption data - https://github.com/ksgeist/dse6311_capstone/tree/main/Capstone_Project_Bank/Electricity_Pricing
+  - Norwegian Krone to US Dollar exchange rates - https://www.exchangerates.org.uk/NOK-USD-spot-exchange-rates-history-2020.html
+  - Team Omega Github Repository: https://github.com/MartinOmasta/team_omega 
 
 - [ ] Alternative project approved by instructor
 
@@ -36,11 +41,11 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 *Example:* A subscription-based company is experiencing customer attrition. When customers cancel their subscriptions, the company loses recurring revenue and may incur additional costs to acquire replacement customers.
 
-__Your response__: Which households shift electricity use in response to variable pricing, and can we predict their flexibility? Customers are given notifications
-regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience
-days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how
-the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
-We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below. 
+__Your response__: 
+- Which households shift electricity use in response to variable pricing, and can we predict their flexibility? 
+  Customers are given notifications regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
+- We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below.
+  Beyond flexibility, might we be able to model future electricty consumption?
 
 ### Why Does This Problem Matter?
 
@@ -70,11 +75,10 @@ __What might this stakeholder want to learn or do with the results?__
 *Example:* A customer retention team might use the results to better understand which customer characteristics or behaviors are associated with cancellation and to inform future retention strategies.
 
 __Your response__: 
-- Government: The effects that policy will make on the constituents and how best to guide that forward keeping in mind the health and well-being of the populace. 
-- Electric companies: How to maintain a customer base and keep houses heated, maintain affordability and profitability.
+- Government: The effects that policy will make on the constituents and how best to guide that forward, keeping in mind the health and well-being of the populace. 
+- Electric companies: Who want to maintain a customer base and keep houses heated, maintain affordability and profitability. Who want to maximize profit by increasing price without losing demand due to dimishing returns.
 - Populace: Gain information to use for more informed business, and political decisions. 
 
-Ipsos and other power companies who want to maximize profit by increasing price without losing demand. Those who can maximize profit prior to dimishing returns.
 
 ### Data Overview
 
@@ -109,7 +113,7 @@ At a high level, describe what you hope to learn or accomplish using the availab
 
 *Example:* The team could use historical customer information to identify patterns associated with churn and investigate whether customer cancellation can be predicted using available customer characteristics and behaviors.
 
-__Your response: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. (I was having a hard time with this one so, we can flesh it out later I think. -BCN
+__Your response__: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. (I was having a hard time with this one so, we can flesh it out later I think. -BCN
 
 [Describe the intended analytical task in a few sentences.]
 
@@ -139,6 +143,8 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 ### Your Intended Stakeholder
 
 This is actually one of the hardest parts - identifying your primary stakeholder. In the real world, you will know exactly who they are and what is expected of you. Here, you are being asked __to choose__ one (and really try to focus on just one) stakeholder. This will be the audience to whom you address your deliverables (as well as other data scientists on your team, of course!).
+
+__Your response__: 
 
 ## Final Check
 
