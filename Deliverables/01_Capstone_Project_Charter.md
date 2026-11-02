@@ -66,8 +66,6 @@ __Who would care about the results of this project?__
 
 Identify the primary stakeholder or intended audience. This could be a business unit, organizational decision-maker, public agency, healthcare provider, or other group.
 
-BCN: I think that the three main target audiences would be Governments, Electrical companies and the population at large. 
-
 __Primary stakeholder:__
 
 __What might this stakeholder want to learn or do with the results?__
@@ -92,7 +90,7 @@ Identify the dataset and briefly describe what it contains. For a project from t
 | Data source | https://doi.org/10.5281/zenodo.8248802 |
 | Unit of analysis (e.g., customer, transaction, patient) | Electricity usage in kWH during Norwegian Winters |
 | Approximate number of observations, if known |  13.52 Million. |
-| General types of information available | Participant ID, Date, Hour of the day, Participation in phase, kWH Demand, Price Signal, Temperature recordings |
+| General types of information available | Participant ID, Date, Hour of the day, Participation in phase, kWH Demand, Price Signal, Temperature recordings, Household Income, Level of Energy Consciousness, Dwelling Type, Household Size, Appliances Used, EV Availability, Solar Capacity, Habitation Frequency, Life Cycle |
 | Data access confirmed? | Yes |
 
 __How might these data help address the problem?__
