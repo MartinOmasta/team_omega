@@ -67,9 +67,9 @@ __What might this stakeholder want to learn or do with the results?__
 *Example:* A customer retention team might use the results to better understand which customer characteristics or behaviors are associated with cancellation and to inform future retention strategies.
 
 __Your response__: 
-                  Government: The effects that policy will make on the constituents and how best to guide that forward keeping in mind the health and well-being of the populace. 
-                  Electric companies: How to maintain a customer base and keep houses heated, maintain affordability and profitability.
-                  Populace: Gain information to use for more informed business, and political decisions. 
+- Government: The effects that policy will make on the constituents and how best to guide that forward keeping in mind the health and well-being of the populace. 
+- Electric companies: How to maintain a customer base and keep houses heated, maintain affordability and profitability.
+- Populace: Gain information to use for more informed business, and political decisions. 
 
 Ipsos and other power companies who want to maximize profit by increasing price without losing demand. Those who can maximize profit prior to dimishing returns.
 
