@@ -42,10 +42,10 @@ Describe the problem in a few sentences. What is happening that an organization,
 *Example:* A subscription-based company is experiencing customer attrition. When customers cancel their subscriptions, the company loses recurring revenue and may incur additional costs to acquire replacement customers.
 
 __Your response__: 
-- Which households shift electricity use in response to variable pricing, and can we predict their flexibility? 
-  Customers are given notifications regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
-- We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below.
-  Beyond flexibility, might we be able to model future electricty consumption?
+- Which households shift electricity use in response to variable pricing, and can we predict their flexibility? <br>
+    Customers are given notifications regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
+- We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below.<br>
+    Beyond flexibility, might we be able to model future electricty consumption?
 
 ### Why Does This Problem Matter?
 
