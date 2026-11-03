@@ -43,8 +43,8 @@ Describe the problem in a few sentences. What is happening that an organization,
 
 __Your response__: 
 - Which households shift electricity use in response to variable pricing, and can we predict their flexibility? <br>
-    Customers are given notifications regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience days when the pricing is the default from their provider - acting as a control. There is never really any extended periods of time when a customer can "get used" to how the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
-- We decided to use the prompt question as our base, and contextually flesh out the results with the additional questions listed below.<br>
+    Customers are given notifications regarding how the pricing on a particular day will be calculated. These can change daily, and are often times fluctuating throughout the day. Customers also experience days when the pricing is the default from their provider - acting as a control. There are never really any extended periods of time when a customer can "get used" to how the prices are going to be, and therefore no way for them to develop a routine around how best to activate or deactivate their appliances. 
+- We decided to use the prompt question as our base, and contextually flesh out the results with additional questions.<br>
     Beyond flexibility, might we be able to model future electricty consumption?
 
 ### Why Does This Problem Matter?
@@ -58,7 +58,7 @@ __Consider__:
 
 *Example:* Understanding customer attrition could help a company evaluate its retention strategies and determine where to focus customer support or engagement resources.
 
-__Your response__: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy sources it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable winter climates - this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. The insights from this data will inform pricing decisions for power suppliers and have an effect on revenue.
+__Your response__: The problems presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of Norwegian residents. These data could possibly be applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy sources, it is important to investigate the cost of energy itself. Norway has one of the more inhospitable winter climates, so these data can share important insights in a changing world. If the power is unreliable or too expensive then the populace at large could be harmed during this climate pivot, and energy suppliers will need to take this into account when they move energy prices & influence policies. The insights from this data will inform pricing decisions for power suppliers and have an effect on revenue.
 
 ### Stakeholder and Intended Use
 
