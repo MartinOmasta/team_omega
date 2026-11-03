@@ -124,7 +124,7 @@ What do you still need to understand about the problem, the data, or the intende
 
 List up to three questions that your team expects to investigate during the background/rationale development and initial data exploration, both of which you will do during Sprint 2.
 
-1. What effect does temperature have on kWh use of electrical consumption? 
+1. What effect does temperature and thermal inertia have on kWh use of electrical consumption? 
 2. What effect does time of day have on kwH use of electrical consumption?
 3. Does the local area or the household size have an effect on kwH use of electrical consumption?
 
@@ -138,7 +138,7 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 2. There may be gaps in the data, or not as comprehensive as would be helpful
 3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this.
 4. Phase_1 (From 11 Feb 2020 until 9 Mar 2020) was truncated due to COVID, so much of the data that is available is only from Phase_2 (16 Dec 2020 - 25 Mar 2021)
-5. These data were collected using a reward incentivization structions (gift cards of $10-$100 USD) to induce people to participate. Unsure what effect this will make on customer flexibility when that reward structure is absent.
+5. These data were collected using a reward incentivization structure (gift cards of $10-$100 USD) to induce people to participate. Unsure what effect this will make on customer flexibility when that reward structure is absent.
 
 ### Your Intended Stakeholder
 
