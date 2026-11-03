@@ -100,14 +100,9 @@ Briefly explain what information in the dataset could be relevant to the problem
 
 *Example:* The dataset contains customer demographics, subscription information, service usage, and cancellation status. These data may help the team examine patterns associated with customer attrition.
 
-__Your response: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. 
+__Your response: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. The extensive surveys provide insights into customer's life styles, wealth & demographics, attitude toward taking measures to make adjustments to their electrical consumptions, descriptions of the home, appliances, service usage and more. All of these data will directly be relevant to determining why factors may make a customer be more flexible.
 
-These data give us an opportunity to form classification typology from discrete behavioral clusters:
-- The Optimizers (Homo Econmicus) who are highly responsive and excel at rapid load shifting
-- The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told by thier power provider
-- The Constrained: These are folk who are willing but maybe be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
 
-These data also give us an opportunity to form a regression model to predict some type of Flexibility Index for a given upcoming price shock.
 
 ### The Data Science Opportunity
 
@@ -117,9 +112,15 @@ At a high level, describe what you hope to learn or accomplish using the availab
 
 *Example:* The team could use historical customer information to identify patterns associated with churn and investigate whether customer cancellation can be predicted using available customer characteristics and behaviors.
 
-__Your response__: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. (I was having a hard time with this one so, we can flesh it out later I think. -BCN
+__Your response__: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. 
 
-[Describe the intended analytical task in a few sentences.]
+These data give us an opportunity to form classification typology from discrete behavioral clusters:
+- The Optimizers (Homo Economicus) who are highly responsive and excel at rapid load shifting.
+- The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told by thier power provider.
+- The Constrained: These are folk who are willing but maybe be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
+
+These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock.
+
 
 ### Initial Questions and Unknowns
 
