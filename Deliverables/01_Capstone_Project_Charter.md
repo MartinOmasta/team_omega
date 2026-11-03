@@ -76,7 +76,7 @@ __Your response__:
 - Government: The effects that policy will make on the constituents and how best to guide that forward, keeping in mind the health and well-being of the populace. 
 - Electric companies: Who want to maintain a customer base and keep houses heated, maintain affordability and profitability. Who want to maximize profit by increasing price without losing demand due to dimishing returns.
   - Statnett SF, Gudbrandsdal Energi, Ishavskraft, and Bodø Energi
-- Populace: Gain information to use for more informed business, and political decisions. 
+- Populace: Gain information to use for more informed residential, business, and political decisions. 
 
 
 ### Data Overview
@@ -100,7 +100,7 @@ Briefly explain what information in the dataset could be relevant to the problem
 
 *Example:* The dataset contains customer demographics, subscription information, service usage, and cancellation status. These data may help the team examine patterns associated with customer attrition.
 
-__Your response: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. The extensive surveys provide insights into customer's life styles, wealth & demographics, attitude toward taking measures to make adjustments to their electrical consumptions, descriptions of the home, appliances, service usage and more. All of these data will directly be relevant to determining why factors may make a customer be more flexible.
+__Your response__: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. The extensive surveys provide insights into customer's life styles, wealth & demographics, attitude toward taking measures to make adjustments to their electrical consumption, descriptions of the home, appliances, service usage and more. All of these data will directly be relevant to determining why factors may make a customer be more flexible.
 
 
 
