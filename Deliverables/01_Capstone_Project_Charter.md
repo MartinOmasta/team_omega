@@ -154,14 +154,14 @@ Statnett SF - the state-owned Norwegian transmission system operator is the prim
 
 Before submitting, confirm that everyone on your team can answer the following:
 
-- [ ] We can clearly describe the problem we will address in our Capstone project.
-- [ ] We understand why the problem may matter and __to whom__ it may matter.
-- [ ] We have identified a relevant stakeholder or intended audience.
-- [ ] We have identified the data we will use and what those data represent.
-- [ ] We understand, at a high level, what machine learning and data science practices might contribute to this problem.
-- [ ] We have identified any important questions or uncertainties that remain.
-- [ ] We have identified, at a high level, any risks to this project.
-- [ ] We have confirmed that the project and data source are appropriate for the eight-week Capstone.
+- [X] We can clearly describe the problem we will address in our Capstone project.
+- [X] We understand why the problem may matter and __to whom__ it may matter.
+- [X] We have identified a relevant stakeholder or intended audience.
+- [X] We have identified the data we will use and what those data represent.
+- [X] We understand, at a high level, what machine learning and data science practices might contribute to this problem.
+- [X] We have identified any important questions or uncertainties that remain.
+- [X] We have identified, at a high level, any risks to this project.
+- [X] We have confirmed that the project and data source are appropriate for the eight-week Capstone.
 
 ## Works Cited
 
