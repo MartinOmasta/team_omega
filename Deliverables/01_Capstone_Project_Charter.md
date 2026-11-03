@@ -112,14 +112,14 @@ At a high level, describe what you hope to learn or accomplish using the availab
 
 *Example:* The team could use historical customer information to identify patterns associated with churn and investigate whether customer cancellation can be predicted using available customer characteristics and behaviors.
 
-__Your response__: Ideally using this dataset finding out how price experiments changed the electrical habits of the participants. 
+__Your response__: Ideally using this dataset to find out how price experiments changed the electrical habits of the participants. 
 
 These data give us an opportunity to form classification typology from discrete behavioral clusters:
 - The Optimizers (Homo Economicus) who are highly responsive and excel at rapid load shifting.
-- The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told by thier power provider.
-- The Constrained: These are folk who are willing but maybe be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
+- The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told to them by thier power provider.
+- The Constrained: These are folk who are willing but may be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
 
-These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock. We may also be able to model future electricity consumption.
+These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock. We may also be able to model predicted future electricity consumption.
 
 
 ### Initial Questions and Unknowns
