@@ -17,7 +17,7 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 __Project title:__ Norwegian Heating - It's Electric! Customers as routine Creatures-of-Habit or as Homo Economicus - driven by rational self-interest
 
-__Team name:__ Team Omega ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/tree/main/images/Team_Omega_Logo.png)
+__Team name:__ Team Omega [![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/tree/main/images/Team_Omega_Logo.png)]
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta
 Facilitation/Team Lead: Martin (Sprint 1)
