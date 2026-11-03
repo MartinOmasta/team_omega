@@ -58,7 +58,7 @@ __Consider__:
 
 *Example:* Understanding customer attrition could help a company evaluate its retention strategies and determine where to focus customer support or engagement resources.
 
-__Your response__: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy source it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable climates during the winter this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. 
+__Your response__: The problem presented above are related to heating during Norwegian winters, the cost of heating and the reliance on electricity are of utmost importance for the health and wellbeing of specifically the Norwegian residents, though possibly applicable to colder climate countries at large. As many nations begin pivoting from carbon heavy fossil fuels to more renewable energy sources it is important to investigate the topic of the cost of energy itself, and as this is in one of the more inhospitable winter climates - this data can share important insights. If the power is unreliable or too expensive then the populace at large could be harmed during this pivot, energy suppliers will need to take this into account when they move energy prices and influence policies. The insights from this data will inform pricing decisions for power suppliers and have an effect on revenue.
 
 ### Stakeholder and Intended Use
 
@@ -119,7 +119,7 @@ These data give us an opportunity to form classification typology from discrete 
 - The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told by thier power provider.
 - The Constrained: These are folk who are willing but maybe be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
 
-These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock.
+These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock. We may also be able to model future electricity consumption.
 
 
 ### Initial Questions and Unknowns
