@@ -17,7 +17,7 @@ Keep your responses concise. Aim for approximately 1–2 pages.
 
 __Project title:__ Norwegian Heating - It's Electric! Customers as routine Creatures-of-Habit or as Homo Economicus - driven by rational self-interest
 
-__Team name:__ ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png) Team Omega ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png)
+__Team name:__ ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png?raw=true) Team Omega ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png?raw=true)
 
 __Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta <br>
 - Facilitation/Team Lead: Martin (Sprint 1)
@@ -172,6 +172,6 @@ Before submitting, confirm that everyone on your team can answer the following:
 
 __Team confirmation:__ We agree that this charter accurately describes our shared understanding of the project at the start of the Capstone.
 
-__Submitted by:__ Benjamin Niemi
+__Submitted by:__ Martin Omasta
 
 __Date:__ 03 Nov 2026
