@@ -1,0 +1,611 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(wesanderson)
+library(stringr)
+library(officer)
+
+options(dplyr.summarise.inform = FALSE)
+
+save_figure <- function(navn, width=12, height=8, figure_folder=figure_folder){
+  ggsave(paste0(figure_folder, navn, ".png"), dpi=600, dev='png', units="cm", width = width, height = height)
+}
+```
+
+```{r Constants}
+Sys.getlocale()
+Sys.setlocale("LC_ALL", "no_NB.utf8")
+
+wf <- paste0(dirname(rstudioapi::getSourceEditorContext()$path), "/")
+wf
+```
+
+# Pricing experiment surveys
+Data: https://zenodo.org/records/8248802
+```{r}
+load(paste0(wf,"Data/iFlex dataset.RData"))
+```
+
+## Survey 1
+```{r}
+df_info <- data.frame(ColumnName = names(survey1_answers), ColumnType = sapply(survey1_answers, class))
+
+N <- nrow(survey1_answers)
+paste("N =", N)
+
+# Create word document
+doc <- read_docx()
+
+fig_folder <- paste0(wf, "Survey1/")
+
+# Assuming that columns starting with 'q' are questions
+answers <- survey1_answers[,2:ncol(survey1_answers)]
+for (i in 1:ncol(answers)) { #ncol(answers)
+  print(paste(i, colnames(answers)[i], class(answers[[i]])))
+  question_id <- colnames(answers)[i]
+  question_name <- paste("Question", question_id)
+  title_text <- paste0(question_name, ": ", survey1_questions$Question[survey1_questions$Question_ID == question_id][1])
+  #title_text <- str_wrap(title_text, width = 70)
+  
+  fig_name <- paste0("Question", i, "_", question_id)
+  
+  
+  # Create a temporary data frame for each question
+  temp_df <- answers[,i]
+  colnames(temp_df) <- "Answers"
+  temp_df <- filter(temp_df, !(is.na(Answers)))
+  N <- nrow(temp_df)
+ 
+
+  # Create the plot
+  if (class(temp_df$Answers) == "numeric"){
+    alternatives <- unique(temp_df$Answers)
+
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = n()/N, .groups = 'drop')
+    print(temp_df)
+    
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+      geom_col(fill=wes_palette("Zissou1")[1]) +
+      theme_classic() +
+      theme(axis.text = element_text(size = 9, color="black"), 
+           axis.title = element_text(size = 9),
+           plot.title = element_text(size = 10, hjust = 0),
+           plot.subtitle = element_text(size = 9, hjust = 0),
+           panel.grid.major.y = element_line(color = "grey", linewidth = 0.1)) +
+      scale_y_continuous(labels = scales::percent) + 
+      labs(subtitle = paste0("(n=", N, ")"), x="", y="")
+    
+    fig_height <- 6
+    if (length(alternatives)<=10){
+      fig_width <- 13
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+    } else {
+      fig_width <- 16
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)     
+    }
+
+    
+  } else {
+    alternatives <- survey1_questions$Answer[survey1_questions$Question_ID == colnames(answers)[i]]
+    alternatives <- str_wrap(alternatives, 50)
+    alternatives <- str_pad(alternatives, width = 50, side = "left")
+    
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = round(n()/N * 100), .groups = 'drop')
+    temp_df$Answers <- str_wrap(temp_df$Answers, 50)
+    temp_df$Answers <- str_pad(temp_df$Answers, width = 50, side = "left")
+    temp_df$Answers <- factor(temp_df$Answers, levels=rev(alternatives))
+    temp_df$Answers <- fct_na_value_to_level(temp_df$Answers, level = "No answer")
+    print(temp_df)
+  
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+    geom_bar(stat = "identity", fill=wes_palette("Zissou1")[1]) +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, max(temp_df$n) * 1.2)) +
+    geom_text(aes(label = paste0(n, "%")), hjust = -0.3, size = 3) +
+    theme_classic() +
+    theme(panel.grid.major = element_blank()) +
+    theme(axis.text = element_text(size = 9, color="black"), 
+          axis.title = element_text(size = 9),
+          plot.title = element_text(size = 10, hjust = 0),
+          plot.subtitle = element_text(size = 9, hjust = 0)) +
+    theme(axis.text.y = element_text(angle = 0, hjust = 1), 
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.x = element_blank()) +
+    labs(subtitle = paste0("(n=", N, ")"), x="") +
+    coord_flip()
+    
+    print(p)
+    fig_height <- length(alternatives) + 2
+    fig_width <- 16
+    save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+  }
+  
+  # Add to word document
+  doc <- doc %>% 
+    body_add_par("") %>%
+    body_add_par(title_text) %>%
+    body_add_img(src = paste0(fig_folder, fig_name, ".png"), width = fig_width * 0.3937007874, height = fig_height * 0.3937007874) # Have to convert from cm to inches
+}
+
+print(doc, target = paste0(fig_folder, "Survey1 figures.docx"))
+```
+
+## Survey 2
+```{r}
+df_info <- data.frame(ColumnName = names(survey2_answers), ColumnType = sapply(survey2_answers, class))
+
+N <- nrow(survey2_answers)
+paste("N =", N)
+
+# Create word document
+doc <- read_docx()
+
+fig_folder <- paste0(wf, "Survey2/")
+
+# Assuming that columns starting with 'Aq' are questions
+answers <- survey2_answers[,2:ncol(survey2_answers)]
+for (i in 1:ncol(answers)) {
+  print(paste(i, colnames(answers)[i], class(answers[[i]])))
+  question_id <- colnames(answers)[i]
+  question_name <- paste("Question", question_id)
+  title_text <- paste0(question_name, ": ", survey2_questions$Question[survey2_questions$Question_ID == question_id][1])
+  #title_text <- str_wrap(title_text, width = 70)
+  
+  fig_name <- paste0("Question", i, "_", question_id)
+  
+  # Create a temporary data frame for each question
+  temp_df <- answers[,i]
+  colnames(temp_df) <- "Answers"
+  temp_df <- filter(temp_df, !(is.na(Answers)))
+  N <- nrow(temp_df)
+ 
+
+  # Create the plot
+  if (class(temp_df$Answers) == "numeric"){
+    alternatives <- unique(temp_df$Answers)
+
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = n()/N, .groups = 'drop')
+    print(temp_df)
+    
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+      geom_col(fill=wes_palette("Zissou1")[1]) +
+      theme_classic() +
+      theme(axis.text = element_text(size = 9, color="black"), 
+           axis.title = element_text(size = 9),
+           plot.title = element_text(size = 10, hjust = 0),
+           plot.subtitle = element_text(size = 9, hjust = 0),
+           panel.grid.major.y = element_line(color = "grey", linewidth = 0.1)) +
+      scale_y_continuous(labels = scales::percent) + 
+      labs(subtitle = paste0("(n=", N, ")"), x="", y="")
+    
+    fig_height <- 6
+    if (length(alternatives)<=10){
+      fig_width <- 13
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+    } else {
+      fig_width <- 16
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)     
+    }
+
+    
+  } else {
+    alternatives <- survey2_questions$Answer[survey2_questions$Question_ID == colnames(answers)[i]]
+    alternatives <- str_wrap(alternatives, 50)
+    alternatives <- str_pad(alternatives, width = 50, side = "left")
+    
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = round(n()/N * 100), .groups = 'drop')
+    temp_df$Answers <- str_wrap(temp_df$Answers, 50)
+    temp_df$Answers <- str_pad(temp_df$Answers, width = 50, side = "left")
+    temp_df$Answers <- factor(temp_df$Answers, levels=rev(alternatives))
+    temp_df$Answers <- fct_na_value_to_level(temp_df$Answers, level = "No answer")
+    print(temp_df)
+  
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+    geom_bar(stat = "identity", fill=wes_palette("Zissou1")[1]) +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, max(temp_df$n) * 1.2)) +
+    geom_text(aes(label = paste0(n, "%")), hjust = -0.3, size = 3) +
+    theme_classic() +
+    theme(panel.grid.major = element_blank()) +
+    theme(axis.text = element_text(size = 9, color="black"), 
+          axis.title = element_text(size = 9),
+          plot.title = element_text(size = 10, hjust = 0),
+          plot.subtitle = element_text(size = 9, hjust = 0)) +
+    theme(axis.text.y = element_text(angle = 0, hjust = 1), 
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.x = element_blank()) +
+    labs(subtitle = paste0("(n=", N, ")"), x="") +
+    coord_flip()
+    
+    print(p)
+    fig_height <- length(alternatives) + 2
+    if (fig_name == "Question48_Aq16"){
+      fig_height <- fig_height * 2
+    }
+    fig_width <- 16
+    save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+  }
+  
+  # Add to word document
+  doc <- doc %>% 
+    body_add_par("") %>%
+    body_add_par(title_text) %>%
+    body_add_img(src = paste0(fig_folder, fig_name, ".png"), width = fig_width * 0.3937007874, height = fig_height * 0.3937007874) # Have to convert from cm to inches
+}
+
+print(doc, target = paste0(fig_folder, "Survey2 figures.docx"))
+```
+
+## Survey 3
+Answers have to be divided into experiment participants and general population.
+```{r}
+ids_exp <- participants$ID[participants$Participation_Experiment == "Yes" & participants$Survey3_answered == "Yes"]
+
+ids_pop <- participants$ID[participants$Participation_Experiment == "No" & participants$Survey3_answered == "Yes"]
+
+survey3_answers_exp <- filter(survey3_answers, ID %in% ids_exp)
+survey3_answers_pop <- filter(survey3_answers, ID %in% ids_pop)
+```
+
+Answers from experiment participants
+```{r}
+survey3_answers_exp$QI2 <- as.numeric(survey3_answers_exp$QI2)
+df_info <- data.frame(ColumnName = names(survey3_answers_exp), ColumnType = sapply(survey3_answers_exp, class))
+
+N <- nrow(survey3_answers_exp)
+paste("N =", N)
+
+# Create word document
+doc <- read_docx()
+
+fig_folder <- paste0(wf, "Survey3_exp/")
+
+# Assuming that columns starting with 'Aq' are questions
+answers <- survey3_answers_exp[,2:ncol(survey3_answers_exp)]
+for (i in 1:ncol(answers)) {
+  print(paste(i, colnames(answers)[i], class(answers[[i]])))
+  question_id <- colnames(answers)[i]
+  question_name <- paste("Question", question_id)
+  title_text <- paste0(question_name, ": ", survey3_questions$Question[survey3_questions$Question_ID == question_id][1])
+  #title_text <- str_wrap(title_text, width = 70)
+  
+  fig_name <- paste0("Question", i, "_", question_id)
+
+  # Create a temporary data frame for each question
+  temp_df <- answers[,i]
+  colnames(temp_df) <- "Answers"
+  temp_df <- filter(temp_df, !(is.na(Answers)))
+  N <- nrow(temp_df)
+ 
+
+  # Create the plot
+  if (class(temp_df$Answers) == "numeric"){
+    alternatives <- unique(temp_df$Answers)
+
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = n()/N, .groups = 'drop')
+    print(temp_df)
+    
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+      geom_col(fill=wes_palette("Zissou1")[1]) +
+      theme_classic() +
+      theme(axis.text = element_text(size = 9, color="black"), 
+           axis.title = element_text(size = 9),
+           plot.title = element_text(size = 10, hjust = 0),
+           plot.subtitle = element_text(size = 9, hjust = 0),
+           panel.grid.major.y = element_line(color = "grey", linewidth = 0.1)) +
+      scale_y_continuous(labels = scales::percent) + 
+      labs(subtitle = paste0("(n=", N, ")"), x="", y="")
+    
+    fig_height <- 6
+    if (length(alternatives)<=10){
+      fig_width <- 13
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+    } else {
+      fig_width <- 16
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)     
+    }
+
+    
+  } else {
+    alternatives <- survey3_questions$Answer[survey3_questions$Question_ID == colnames(answers)[i]]
+    alternatives <- str_wrap(alternatives, 50)
+    alternatives <- str_pad(alternatives, width = 50, side = "left")
+    
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = round(n()/N * 100), .groups = 'drop')
+    temp_df$Answers <- str_wrap(temp_df$Answers, 50)
+    temp_df$Answers <- str_pad(temp_df$Answers, width = 50, side = "left")
+    temp_df$Answers <- factor(temp_df$Answers, levels=rev(alternatives))
+    temp_df$Answers <- fct_na_value_to_level(temp_df$Answers, level = "No answer")
+    print(temp_df)
+  
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+    geom_bar(stat = "identity", fill=wes_palette("Zissou1")[1]) +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, max(temp_df$n) * 1.2)) +
+    geom_text(aes(label = paste0(n, "%")), hjust = -0.3, size = 3) +
+    theme_classic() +
+    theme(panel.grid.major = element_blank()) +
+    theme(axis.text = element_text(size = 9, color="black"), 
+          axis.title = element_text(size = 9),
+          plot.title = element_text(size = 10, hjust = 0),
+          plot.subtitle = element_text(size = 9, hjust = 0)) +
+    theme(axis.text.y = element_text(angle = 0, hjust = 1), 
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.x = element_blank()) +
+    labs(subtitle = paste0("(n=", N, ")"), x="") +
+    coord_flip()
+    
+    print(p)
+    fig_height <- length(alternatives) + 2
+    fig_width <- 16
+    save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+  }
+  
+  # Add to word document
+  doc <- doc %>% 
+    body_add_par("") %>%
+    body_add_par(title_text) %>%
+    body_add_img(src = paste0(fig_folder, fig_name, ".png"), width = fig_width * 0.3937007874, height = fig_height * 0.3937007874) # Have to convert from cm to inches
+}
+
+print(doc, target = paste0(fig_folder, "Survey3_exp figures.docx"))
+```
+
+Answers from general population
+```{r}
+survey3_answers_pop$QI2 <- as.numeric(survey3_answers_pop$QI2)
+df_info <- data.frame(ColumnName = names(survey3_answers_pop), ColumnType = sapply(survey3_answers_pop, class))
+
+N <- nrow(survey3_answers_pop)
+paste("N =", N)
+
+# Create word document
+doc <- read_docx()
+
+fig_folder <- paste0(wf, "Survey3_pop/")
+
+# Assuming that columns starting with 'Aq' are questions
+answers <- survey3_answers_pop[,2:ncol(survey3_answers_pop)]
+for (i in 1:ncol(answers)) {
+  print(paste(i, colnames(answers)[i], class(answers[[i]])))
+  question_id <- colnames(answers)[i]
+  question_name <- paste("Question", question_id)
+  title_text <- paste0(question_name, ": ", survey3_questions$Question[survey3_questions$Question_ID == question_id][1])
+  #title_text <- str_wrap(title_text, width = 70)
+  
+  fig_name <- paste0("Question", i, "_", question_id)
+
+  # Create a temporary data frame for each question
+  temp_df <- answers[,i]
+  colnames(temp_df) <- "Answers"
+  temp_df <- filter(temp_df, !(is.na(Answers)))
+  N <- nrow(temp_df)
+ 
+
+  # Create the plot
+  if (class(temp_df$Answers) == "numeric"){
+    alternatives <- unique(temp_df$Answers)
+
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = n()/N, .groups = 'drop')
+    print(temp_df)
+    
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+      geom_col(fill=wes_palette("Zissou1")[1]) +
+      theme_classic() +
+      theme(axis.text = element_text(size = 9, color="black"), 
+           axis.title = element_text(size = 9),
+           plot.title = element_text(size = 10, hjust = 0),
+           plot.subtitle = element_text(size = 9, hjust = 0),
+           panel.grid.major.y = element_line(color = "grey", linewidth = 0.1)) +
+      scale_y_continuous(labels = scales::percent) + 
+      labs(subtitle = paste0("(n=", N, ")"), x="", y="")
+    
+    fig_height <- 6
+    if (length(alternatives)<=10){
+      fig_width <- 13
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+    } else {
+      fig_width <- 16
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)     
+    }
+
+    
+  } else {
+    alternatives <- survey3_questions$Answer[survey3_questions$Question_ID == colnames(answers)[i]]
+    alternatives <- str_wrap(alternatives, 50)
+    alternatives <- str_pad(alternatives, width = 50, side = "left")
+    
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = round(n()/N * 100), .groups = 'drop')
+    temp_df$Answers <- str_wrap(temp_df$Answers, 50)
+    temp_df$Answers <- str_pad(temp_df$Answers, width = 50, side = "left")
+    temp_df$Answers <- factor(temp_df$Answers, levels=rev(alternatives))
+    temp_df$Answers <- fct_na_value_to_level(temp_df$Answers, level = "No answer")
+    print(temp_df)
+  
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+    geom_bar(stat = "identity", fill=wes_palette("Zissou1")[1]) +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, max(temp_df$n) * 1.2)) +
+    geom_text(aes(label = paste0(n, "%")), hjust = -0.3, size = 3) +
+    theme_classic() +
+    theme(panel.grid.major = element_blank()) +
+    theme(axis.text = element_text(size = 9, color="black"), 
+          axis.title = element_text(size = 9),
+          plot.title = element_text(size = 10, hjust = 0),
+          plot.subtitle = element_text(size = 9, hjust = 0)) +
+    theme(axis.text.y = element_text(angle = 0, hjust = 1), 
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.x = element_blank()) +
+    labs(subtitle = paste0("(n=", N, ")"), x="") +
+    coord_flip()
+    
+    print(p)
+    fig_height <- length(alternatives) + 2
+    fig_width <- 16
+    save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+  }
+  
+  # Add to word document
+  doc <- doc %>% 
+    body_add_par("") %>%
+    body_add_par(title_text) %>%
+    body_add_img(src = paste0(fig_folder, fig_name, ".png"), width = fig_width * 0.3937007874, height = fig_height * 0.3937007874) # Have to convert from cm to inches
+}
+
+print(doc, target = paste0(fig_folder, "Survey3_pop figures.docx"))
+```
+
+# Real world survey
+Data: https://zenodo.org/records/8423312
+```{r}
+survey_questions <- read_csv(paste0(wf,"Data/survey.csv"))
+survey_answers <- read_csv(paste0(wf,"Data/answers.csv"))
+
+# Replace the numbers in survey_answers with the corresponding text
+# Loop over all columns in survey_answers
+for (colname in colnames(survey_answers)) {
+  # Check if the column exists in survey_questions
+  if (colname %in% survey_questions$Question_ID) {
+    # Check if is multiple choice or numeric
+    if (survey_questions$Option_translation[survey_questions$Question_ID == colname][1] != "Numeric value") {
+      df_options <- survey_questions[survey_questions$Question_ID == colname, c("Option_number", "Option_translation")]
+      df_options$Option_number <- as.numeric(df_options$Option_number)
+      df_temp <- survey_answers[ ,colname]
+      colnames(df_temp) <- "Option_number"
+      df_temp <- df_temp %>% left_join(df_options, by = "Option_number")
+      survey_answers[ ,colname] <- df_temp[, "Option_translation"]
+    }
+  }
+}
+```
+
+```{r}
+df_info <- data.frame(ColumnName = names(survey_answers), ColumnType = sapply(survey_answers, class))
+
+N <- nrow(survey_answers)
+paste("N =", N)
+
+# Create word document
+doc <- read_docx()
+
+fig_folder <- paste0(wf, "Survey_real/")
+
+# Assuming that columns starting with 'Q' are questions
+answers <- survey_answers[,2:ncol(survey_answers)]
+for (i in 1:ncol(answers)) {
+  print(paste(i, colnames(answers)[i], class(answers[[i]])))
+  question_id <- colnames(answers)[i]
+  question_name <- paste("Question", question_id)
+  title_text <- paste0(question_name, ": ", survey_questions$Question_translation[survey_questions$Question_ID == question_id][1])
+  #title_text <- str_wrap(title_text, width = 70)
+  
+  fig_name <- paste0("Question", i, "_", question_id)
+
+  # Create a temporary data frame for each question
+  temp_df <- answers[,i]
+  colnames(temp_df) <- "Answers"
+  temp_df <- filter(temp_df, !(is.na(Answers)))
+  N <- nrow(temp_df)
+ 
+
+  # Create the plot
+  if (class(temp_df$Answers) == "numeric"){
+    alternatives <- unique(temp_df$Answers)
+
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = n()/N, .groups = 'drop')
+    print(temp_df)
+    
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+      geom_col(fill=wes_palette("Zissou1")[1]) +
+      theme_classic() +
+      theme(axis.text = element_text(size = 9, color="black"), 
+           axis.title = element_text(size = 9),
+           plot.title = element_text(size = 10, hjust = 0),
+           plot.subtitle = element_text(size = 9, hjust = 0),
+           panel.grid.major.y = element_line(color = "grey", linewidth = 0.1)) +
+      scale_y_continuous(labels = scales::percent) + 
+      labs(subtitle = paste0("(n=", N, ")"), x="", y="")
+    
+    fig_height <- 6
+    if (length(alternatives)<=10){
+      fig_width <- 13
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+    } else {
+      fig_width <- 16
+      save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)     
+    }
+
+    
+  } else {
+    alternatives <- survey_questions$Option_translation[survey_questions$Question_ID == colnames(answers)[i]]
+    alternatives <- str_wrap(alternatives, 50)
+    alternatives <- str_pad(alternatives, width = 50, side = "left")
+    
+    temp_df <- temp_df %>% 
+      group_by(Answers) %>% 
+      summarise(n = round(n()/N * 100), .groups = 'drop')
+    temp_df$Answers <- str_wrap(temp_df$Answers, 50)
+    temp_df$Answers <- str_pad(temp_df$Answers, width = 50, side = "left")
+    temp_df$Answers <- factor(temp_df$Answers, levels=rev(alternatives))
+    temp_df$Answers <- fct_na_value_to_level(temp_df$Answers, level = "No answer")
+    print(temp_df)
+  
+    p <- ggplot(temp_df, aes(x = Answers, y = n)) +
+    geom_bar(stat = "identity", fill=wes_palette("Zissou1")[1]) +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, max(temp_df$n) * 1.2)) +
+    geom_text(aes(label = paste0(n, "%")), hjust = -0.3, size = 3) +
+    theme_classic() +
+    theme(panel.grid.major = element_blank()) +
+    theme(axis.text = element_text(size = 9, color="black"), 
+          axis.title = element_text(size = 9),
+          plot.title = element_text(size = 10, hjust = 0),
+          plot.subtitle = element_text(size = 9, hjust = 0)) +
+    theme(axis.text.y = element_text(angle = 0, hjust = 1), 
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.x = element_blank()) +
+    labs(subtitle = paste0("(n=", N, ")"), x="") +
+    coord_flip()
+    
+    print(p)
+    fig_height <- length(alternatives) + 2
+    fig_width <- 16
+    save_figure(navn=fig_name, figure_folder = fig_folder, height = fig_height, width = fig_width)
+  }
+  
+  # Add to word document
+  doc <- doc %>% 
+    body_add_par("") %>%
+    body_add_par(title_text) %>%
+    body_add_img(src = paste0(fig_folder, fig_name, ".png"), width = fig_width * 0.3937007874, height = fig_height * 0.3937007874) # Have to convert from cm to inches
+}
+
+print(doc, target = paste0(fig_folder, "Survey_real figures.docx"))
+```

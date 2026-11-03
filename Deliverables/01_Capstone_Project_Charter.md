@@ -73,11 +73,10 @@ __What might this stakeholder want to learn or do with the results?__
 *Example:* A customer retention team might use the results to better understand which customer characteristics or behaviors are associated with cancellation and to inform future retention strategies.
 
 __Your response__: 
-- Government: The effects that policy will make on the constituents and how best to guide that forward, keeping in mind the health and well-being of the populace. 
-- Electric companies: Who want to maintain a customer base and keep houses heated, maintain affordability and profitability. Who want to maximize profit by increasing price without losing demand due to dimishing returns.
+- Government: Use the results to help drive policies that balance energy use while keeping in mind the health & well-being of the populace. 
+- Electric companies: Use the results to maintain a customer base & keep houses heated, maintain affordability and profitability. They want to maximize profit by increasing price without losing demand due to dimishing returns, while meeting regulatory obligations.
   - Statnett SF, Gudbrandsdal Energi, Ishavskraft, and Bodø Energi
 - Populace: Gain information to use for more informed residential, business, and political decisions. 
-
 
 ### Data Overview
 
@@ -89,7 +88,7 @@ Identify the dataset and briefly describe what it contains. For a project from t
 |---|---|
 | Dataset name | A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment. |
 | Data source | https://doi.org/10.5281/zenodo.8248802 |
-| Unit of analysis (e.g., customer, transaction, patient) | Electricity usage in kWH during Norwegian Winters |
+| Unit of analysis (e.g., customer, transaction, patient) | Hourly electricity usage in kWH during Norwegian Winters |
 | Approximate number of observations, if known |  13.52 Million. |
 | General types of information available | Participant ID, Date, Hour of the day, Participation in phase, kWH Demand, Price Signal, Temperature recordings, Household Income, Level of Energy Consciousness, Dwelling Type, Household Size, Appliances Used, EV Availability, Solar Capacity, Habitation Frequency, Life Cycle |
 | Data access confirmed? | Yes |
@@ -100,9 +99,7 @@ Briefly explain what information in the dataset could be relevant to the problem
 
 *Example:* The dataset contains customer demographics, subscription information, service usage, and cancellation status. These data may help the team examine patterns associated with customer attrition.
 
-__Your response__: As this is real world recorded data from a study with the citizens of Norway participating it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. The extensive surveys provide insights into customer's life styles, wealth & demographics, attitude toward taking measures to make adjustments to their electrical consumption, descriptions of the home, appliances, service usage and more. All of these data will directly be relevant to determining why factors may make a customer be more flexible.
-
-
+__Your response__: As this is real world data recorded from a study with the citizens of Norway, it lends itself to a high level of interest. Norway is a high latitude country which experiences harsh winters with extremely low temperatures. Heating is a crucial issue for those individuals living there and with the prevalence of electric heaters it's very useful to have a data set that measures the usage, along with a variety of pricing experiments and surveys to understand the thoughts of the citizens. The extensive surveys provide insights into customer's life styles, wealth & demographics, attitude toward taking measures to make adjustments to their electrical consumption, descriptions of the home, appliances, service usage and more. All of these data will directly be relevant to determining why factors may make a customer be more (or less) flexible.
 
 ### The Data Science Opportunity
 
@@ -117,10 +114,9 @@ __Your response__: Ideally using this dataset to find out how price experiments 
 These data give us an opportunity to form classification typology from discrete behavioral clusters:
 - The Optimizers (Homo Economicus) who are highly responsive and excel at rapid load shifting.
 - The Inelastic (Creatures-of-Habit) who have a fairly flat response to Pricing Signals told to them by thier power provider.
-- The Constrained: These are folk who are willing but may be physically unable due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
+- The Constrained: These are folk who are willing but may be physically unable to exhibit flexibility due to poor home insulation, infrequent habitation of the dwelling during fluxation, or busy lives to not consider daily reprogramming of the smart thermostat. 
 
 These data also give us an opportunity to form a regression model to predict some type of Flexibility Propensity Index for a given upcoming price shock. We may also be able to model predicted future electricity consumption.
-
 
 ### Initial Questions and Unknowns
 
@@ -142,6 +138,7 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 2. There may be gaps in the data, or not as comprehensive as would be helpful
 3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this.
 4. Phase_1 (From 11 Feb 2020 until 9 Mar 2020) was truncated due to COVID, so much of the data that is available is only from Phase_2 (16 Dec 2020 - 25 Mar 2021)
+5. These data were collected using a reward incentivization structions (gift cards of $10-$100 USD) to induce people to participate. Unsure what effect this will make on customer flexibility when that reward structure is absent.
 
 ### Your Intended Stakeholder
 
@@ -163,10 +160,10 @@ Before submitting, confirm that everyone on your team can answer the following:
 - [X] We have identified, at a high level, any risks to this project.
 - [X] We have confirmed that the project and data source are appropriate for the eight-week Capstone.
 
-## Works Cited
+### Works Cited
 
 - M. Hofmann and T. Siebenbrunner, “A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment,” Data Brief, vol. 50, p. 109571, Oct. 2023, doi: 10.1016/j.dib.2023.109571.
-- Google, Virtual Assistant (VA), "Prompt used to generate response (Various prompts "Thoughts on Data Exploration and conceptualizing Flexability")," 2026. [Online]. Available: VAMMA (Virtual Assistant with Manual Modification and Arrangement, Gemini, Google). [Accessed Nov 2026].
+- Google, Virtual Assistant (VA), "Prompt used to generate response (Various prompts "Thoughts on Data Exploration and conceptualizing Flexibility")," 2026. [Online]. Available: VAMMA (Virtual Assistant with Manual Modification and Arrangement, Gemini, Google). [Accessed Nov 2026].
 - “Homo economicus,” Wikipedia. Oct. 04, 2026. Accessed: Nov. 02, 2026. [Online]. Available: https://en.wikipedia.org/w/index.php?title=Homo_economicus&oldid=1378415223
 - “Norwegian Krone (NOK) To US Dollar (USD) Exchange Rate History for 2020.” Accessed: Nov. 02, 2026. [Online]. Available: https://www.exchange-rates.org/exchange-rate-history/nok-usd-2020
 
