@@ -141,7 +141,7 @@ Project risks are uncertainties that can undermine a project's success. Sometime
 1. __The dataset chosen may not be suitable to address the problem/question exactly as posed.__
 2. There may be gaps in the data, or not as comprehensive as would be helpful
 3. Data includes survey answers with open ended questions, the subjectivity of them is difficult to quantitate or use in an analysis like this.
-4. Phase_1 (From 11 Feb 2020 until 9 Mar 2020) was truncated due to COVID, so much of the data that is available is only fromp Phase_2 (16 Dec 2020 - 25 Mar 2021)
+4. Phase_1 (From 11 Feb 2020 until 9 Mar 2020) was truncated due to COVID, so much of the data that is available is only from Phase_2 (16 Dec 2020 - 25 Mar 2021)
 
 ### Your Intended Stakeholder
 
