@@ -75,7 +75,7 @@ __What might this stakeholder want to learn or do with the results?__
 __Your response__: 
 - Government: The effects that policy will make on the constituents and how best to guide that forward, keeping in mind the health and well-being of the populace. 
 - Electric companies: Who want to maintain a customer base and keep houses heated, maintain affordability and profitability. Who want to maximize profit by increasing price without losing demand due to dimishing returns.
-  - Statnett, Gudbrandsdal Energi, Ishavskraft, and Bodø Energi
+  - Statnett SF, Gudbrandsdal Energi, Ishavskraft, and Bodø Energi
 - Populace: Gain information to use for more informed business, and political decisions. 
 
 
@@ -128,9 +128,7 @@ What do you still need to understand about the problem, the data, or the intende
 List up to three questions that your team expects to investigate during the background/rationale development and initial data exploration, both of which you will do during Sprint 2.
 
 1. What effect does temperature have on kWh use of electrical consumption? 
-
 2. What effect does time of day have on kwH use of electrical consumption?
-
 3. Does the local area or the household size have an effect on kwH use of electrical consumption?
 
 These are starting questions, not necessarily your final analytical question(s). You will refine your understanding of the problem and develop your Analysis Plan during Sprint 2.
