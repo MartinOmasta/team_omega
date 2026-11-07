@@ -1,0 +1,292 @@
+---
+title: "Norwegian Electricity"
+author: "Ben Niemi"
+date: "2026-10-30"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(corrplot)
+```
+
+```{r}
+its_electric_df <- read.csv("data_hourly.csv")
+
+head(its_electric_df)
+```
+
+```{r}
+glimpse(its_electric_df)
+```
+```{r}
+its_electric_df %>% distinct(ID)
+```
+
+
+```{r}
+its_electric_df %>% nrow()
+```
+13.5 million rows total
+
+```{r}
+its_electric_df %>% distinct(Experiment_price_NOK_kWh)
+```
+
+
+```{r}
+its_electric_df %>% summarise(na_count = sum(is.na(Experiment_price_NOK_kWh)))
+```
+11.98 million NA values in Experiment_price_NOK_kwh
+
+```{r}
+its_electric_df %>% summarise(blank_count = sum(Experiment_price_NOK_kWh == "", na.rm = TRUE))
+```
+
+
+```{r}
+its_electric_df %>% distinct(Price_signal)
+```
+
+```{r}
+its_electric_df %>% summarise(blank_count = sum(Price_signal == "", na.rm = TRUE))
+```
+
+```{r}
+its_electric_df %>%
+  mutate(
+    signal_absent = is.na(Price_signal) |
+      trimws(as.character(Price_signal)) == "",
+    price_absent = is.na(Experiment_price_NOK_kWh)) %>%
+  count(signal_absent, price_absent)
+```
+
+```{r}
+its_electric_df <- its_electric_df %>%
+  mutate(Date = as.Date(Date))
+
+its_electric_df %>%
+  group_by(Participation_Phase) %>%
+  summarise(
+    rows = n(),
+    households = n_distinct(ID),
+    first_date = min(Date, na.rm = TRUE),
+    last_date = max(Date, na.rm = TRUE),
+    distinct_dates = n_distinct(Date, na.rm = TRUE),
+    missing_consumption = sum(is.na(Demand_kWh)),
+    missing_price = sum(is.na(Experiment_price_NOK_kWh)),
+    .groups = "drop")
+```
+
+```{r}
+#removing Phase 1 data for now.
+its_electric_df2 <- its_electric_df %>%
+  filter(Participation_Phase == "Phase_2")
+
+glimpse(its_electric_df2)
+```
+
+```{r}
+its_electric_df2 %>%
+  summarise(
+    rows = n(),
+    households = n_distinct(ID),
+    demand_missing_val = sum(is.na(Demand_kWh)),
+    no_demand = sum(Demand_kWh == 0, na.rm = TRUE),
+    neg_demand = sum(Demand_kWh < 0, na.rm = TRUE),
+    min = min(Demand_kWh, na.rm = TRUE),
+    med = median(Demand_kWh, na.rm = TRUE),
+    mean = mean(Demand_kWh, na.rm = TRUE),
+    max = max(Demand_kWh, na.rm = TRUE))
+```
+
+
+```{r}
+#Looking into electricity consumption
+its_electric_df2 %>%
+  filter(Demand_kWh == 0) %>%
+  count(ID, name = "no_demand_hrs", sort = TRUE)
+```
+
+```{r}
+its_electric_df2 %>%
+  filter(Demand_kWh == 0) %>%
+  count(From, name = "houses_with_zero", sort = TRUE)
+```
+
+
+```{r}
+its_electric_df2 %>%
+  filter(Demand_kWh == 0) %>%
+  mutate(norway_hour = lubridate::hour(lubridate::with_tz(lubridate::ymd_hms(From, tz = "UTC"),"Europe/Oslo"))) %>%
+  count(norway_hour, name = "zero_readings", sort = TRUE)
+```
+
+```{r}
+ggplot(its_electric_df2, aes(x = Demand_kWh)) +
+  geom_histogram(binwidth = 0.25, fill = "lightblue", color = "white") +
+  labs(title = "Phase 2 hourly electricity consumption", x = "Hourly consumption (kWh)",
+    y = "Number of household-hour observations") +theme_minimal()
+```
+Note: This is hourly consumption.
+Follows along with the basic statistics above, consumption is right-skewed. 
+scale goes out that far because there's at least one data point at 22.62.
+
+Investigate daily, possible comparison to US values. 
+Source: https://www.eia.gov/energyexplained/use-of-energy/electricity-use-in-homes.php
+US: Average 10500 kWh per year = Average of 28.8 per day.
+
+Note: This average per day is for the whole calendar year, and not specifically for winter. As such it isn't a great comparison. 
+
+```{r}
+daily_df <- its_electric_df2 %>%
+  group_by(ID, Date) %>%
+  summarise(
+    hours_recorded = n(),
+    missing_hours = sum(is.na(Demand_kWh)),
+    daily_kWh = sum(Demand_kWh),
+    .groups = "drop")
+
+daily_df %>% count(hours_recorded, missing_hours)
+```
+
+```{r}
+daily_df %>%
+  summarise(
+    rows = n(),
+    households = n_distinct(ID),
+    demand_missing_val = sum(is.na(daily_kWh)),
+    no_demand = sum(daily_kWh == 0, na.rm = TRUE),
+    neg_demand = sum(daily_kWh < 0, na.rm = TRUE),
+    min = min(daily_kWh, na.rm = TRUE),
+    med = median(daily_kWh, na.rm = TRUE),
+    mean = mean(daily_kWh, na.rm = TRUE),
+    max = max(daily_kWh, na.rm = TRUE))
+```
+
+
+```{r}
+ggplot(
+  filter(daily_df, hours_recorded == 24, missing_hours == 0),
+  aes(x = daily_kWh)) + geom_histogram(binwidth = 5, fill = "lightblue", color = "white") +
+  labs(title = "Phase 2 daily household electricity consumption", x = "Daily consumption (kWh)",
+    y = "Number of household-day observations") + theme_minimal()
+```
+Roughly the same pattern for daily consumption. 
+
+
+```{r}
+hourly_pattern <- its_electric_df2 %>%
+  mutate(norway_hour = lubridate::hour(lubridate::with_tz(lubridate::ymd_hms(From, tz = "UTC"), "Europe/Oslo"))) %>%
+  group_by(norway_hour) %>%
+  summarise(mean_kWh = mean(Demand_kWh, na.rm = TRUE), .groups = "drop")
+glimpse(hourly_pattern)
+```
+
+```{r}
+
+ggplot(hourly_pattern, aes(x = norway_hour, y = mean_kWh)) +
+  geom_line(color = "lightblue", linewidth = 1) +
+  geom_point(color = "red") +
+  scale_x_continuous(breaks = 0:23) +
+  labs(title = "Average daily electricity consumption pattern: Phase 2",
+    x = "Hour of day (Norway local time)",
+    y = "Mean household consumption (kWh during hour)") + theme_minimal()
+```
+
+Makes sense that Electricity usage would decrease over night as that's when I'd assume people are sleeping. The spike from 1500 to 1930 is interesting though. 
+
+```{r}
+its_electric_df2 %>%
+  count(Price_signal, sort = TRUE)
+```
+
+```{r}
+signal_pattern <- its_electric_df2 %>%
+  filter(!is.na(Price_signal), trimws(Price_signal) != "") %>%
+  mutate(norway_hour = lubridate::hour(lubridate::with_tz(lubridate::ymd_hms(From, tz = "UTC"),"Europe/Oslo"))) %>%
+  group_by(Price_signal, norway_hour) %>%
+  summarise(mean_kWh = mean(Demand_kWh, na.rm = TRUE), .groups = "drop")
+glimpse(signal_pattern)
+```
+
+```{r}
+ggplot(signal_pattern, aes(x = norway_hour, y = mean_kWh)) +
+  geom_line(color = "lightblue", linewidth = 0.8) +
+  geom_point(color = "red", size = 1) +
+  facet_wrap(~ Price_signal) +
+  scale_x_continuous(breaks = seq(0, 23, 4)) +
+  labs(title = "Hourly consumption by price signal: Phase 2",
+    x = "Hour of day (Norway local time)",
+    y = "Mean household consumption (kWh during hour)") +theme_minimal()
+```
+These graphs show that the average for each price signal follows roughly the same pattern, some are lower like A_5 and some are higher like P_5. Unsure how relevant these would be without comparing to the control households but interesting nonetheless. 
+
+```{r}
+#Moving on to add temperature
+temperature_pattern <- its_electric_df2 %>%
+  filter(!is.na(Temperature), !is.na(Demand_kWh)) %>%
+  mutate(temp_band = floor(Temperature)) %>%
+  group_by(temp_band) %>%
+  summarise(mean_kWh = mean(Demand_kWh), observations = n(),.groups = "drop")
+
+glimpse(temperature_pattern)
+```
+
+```{r}
+ggplot(temperature_pattern, aes(x = temp_band + 0.5, y = mean_kWh)) +
+  geom_line(color = "lightblue", linewidth = 1) +
+  geom_point(aes(size = observations), color = "red") +
+  labs(title = "Electricity consumption by outdoor temperature: Phase 2",
+    x = "Outdoor temperature (°C)",
+    y = "Mean hourly household consumption (kWh)",
+    size = "Household-hours") + theme_minimal()
+```
+
+Not a very linear graph, so consumption doesn't change at a strictly linear rate with temperature. Also interesting to see the groupings compared to outdoor temps, they are to be expected but interesting to see. 
+
+```{r}
+participants <- readr::read_csv("participants.csv")
+
+phase2_groups <- its_electric_df2 %>%
+  left_join(participants %>%
+      select(ID, Region, Control_Price_Phase2), by = "ID")
+
+glimpse(phase2_groups)
+```
+
+```{r}
+a5_times <- phase2_groups %>%
+  filter(Price_signal == "A_5") %>%
+  distinct(Region, From)
+glimpse(a5_times)
+```
+
+```{r}
+a5_comparison <- phase2_groups %>%
+  semi_join(a5_times, by = c("Region", "From")) %>%
+  filter(Price_signal == "A_5" | Control_Price_Phase2 == "Control group") %>%
+  mutate(comparison_group = if_else(Control_Price_Phase2 == "Control group","Control","A_5"),
+    norway_hour = lubridate::hour(lubridate::with_tz(
+        lubridate::ymd_hms(From, tz = "UTC"),
+        "Europe/Oslo"))) %>%
+  group_by(comparison_group, norway_hour) %>%
+  summarise(mean_kWh = mean(Demand_kWh, na.rm = TRUE),.groups = "drop")
+
+```
+
+
+```{r}
+ggplot(a5_comparison, aes(x = norway_hour, y = mean_kWh, color = comparison_group)) +
+  geom_line(linewidth = 1) +
+  geom_point() +
+  scale_x_continuous(breaks = seq(0, 23, 2)) +
+  labs(title = "A_5 versus control: average hourly consumption",
+    subtitle = "Matched region and timestamps",
+    x = "Hour of day (Norway local time)",
+    y = "Mean household consumption (kWh during hour)",
+    color = "Group") + theme_minimal()
+```
+
