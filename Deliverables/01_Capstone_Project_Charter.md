@@ -19,10 +19,11 @@ __Project title:__ Norwegian Heating - It's Electric! Customers as routine Creat
 
 __Team name:__ ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png?raw=true) Team Omega ![Team Omega's Logo](https://github.com/MartinOmasta/team_omega/blob/main/images/Team_Omega_Logo_Small.png?raw=true)
 
-__Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta <br>
+__Team members:__ Anthony Ruoti, Benjamin Niemi, Martin Omasta, Jayarao Chejarla <br>
 - Facilitation/Team Lead: Martin (Sprint 1)
 - Notetakers/Document Lead: Ben (Sprint 1)
 - Delegate/Communications Lead: Anthony (Sprint 1)
+- Technical/Data Lead: Jay (Sprint 1)
 
 __Project source:__
 
