@@ -182,3 +182,4 @@ cython_debug/
 
 # Custom project data
 Data/data_hourly.csv
+notebooks/eda_*
